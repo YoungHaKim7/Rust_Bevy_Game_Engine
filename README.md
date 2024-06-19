@@ -23,6 +23,16 @@
 
 # Bevy GameEngine 최신 소식
 
+- Bevy 0-14-rc.2, Powerglove, and Soup - This Week in Bevy chris biscardi
+  - https://youtu.be/5r90Z7Ec3Pw?si=8MLWedGjtK-x1BFS
+- https://bevyengine.org/news/bevy-0-13/
+- SME Announcements
+  - https://bevyengine.org/news/sme-announcements/
+- https://bevyengine.org/news/bevy-webgpu/
+
+- This Week in Bevy Engine | chris biscardi
+  - https://youtube.com/playlist?list=PLWtPciJ1UMuAyAER9ASVEDRIz0DUspOeZ&si=T-HJLRn39NKK1Hyp
+
 - Posted on November 04, 2023 by Bevy Contributors(23.11.04)
   - https://bevyengine.org/news/bevy-0-12/
 
