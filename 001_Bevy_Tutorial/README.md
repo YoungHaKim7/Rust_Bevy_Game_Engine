@@ -18,3 +18,25 @@
 
 # Bevy 0-14-rc.2, Powerglove, and Soup - This Week in Bevy chris biscardi
 - https://youtu.be/5r90Z7Ec3Pw?si=8MLWedGjtK-x1BFS
+
+
+# 컴파일 빠르게 만들기
+
+- `.cargo/config.toml`
+```toml
+
+[build]
+rustflags = ["-Z", "threads=20"]
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-Zlinker-features=-lld"]
+```
+
+- `rust-toolchain.toml` 
+
+```toml
+
+[toolchain]
+channel ="nightly"
+components = ["rustfmt", "rust-src"]
+```
