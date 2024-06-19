@@ -15,6 +15,7 @@
 
   - https://bevyengine.org/learn/
   - https://bevy-cheatbook.github.io/introduction.html
+  - https://bevy-cheatbook.github.io/
 
 
 - https://github.com/bevyengine/bevy/tree/latest/examples#examples
