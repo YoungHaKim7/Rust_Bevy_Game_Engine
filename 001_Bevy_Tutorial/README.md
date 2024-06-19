@@ -21,6 +21,8 @@
 
 
 # 컴파일 빠르게 만들기
+- Faster linking times on nightly on Linux using `rust-lld`
+  - https://blog.rust-lang.org/2024/05/17/enabling-rust-lld-on-linux.html
 
 - `.cargo/config.toml`
 ```toml
