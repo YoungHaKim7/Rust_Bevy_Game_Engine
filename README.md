@@ -70,12 +70,12 @@ https://youtu.be/GwlZ5EPu8l0?si=cPHJUupEsMuYDDfU
 
 # Bevy Plugin Showcases | Logic Projects
 
-https://youtube.com/playlist?list=PLT_D88-MTFOP4QE1D0eUKlPpUi35uVvuy&si=AfjBDeqcKtvHiTR0
+- https://youtube.com/playlist?list=PLT_D88-MTFOP4QE1D0eUKlPpUi35uVvuy&si=AfjBDeqcKtvHiTR0
 
 <hr>
-
 
 <hr>
 
 # Doom 만들면서 게임엔진 이해하기(Rust Code)
 - https://gitlab.com/flukejones/room4doom
+  - https://ljones.dev/blog/room4doom-20220529/
