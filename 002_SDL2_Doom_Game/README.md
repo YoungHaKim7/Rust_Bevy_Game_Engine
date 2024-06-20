@@ -11,3 +11,6 @@
 - https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer
 - 공식 홈페이지
   - https://www.libsdl.org/
+
+- SDL2 (Rust-SDL2)
+  - https://github.com/Rust-SDL2/rust-sdl2
