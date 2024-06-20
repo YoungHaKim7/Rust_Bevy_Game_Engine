@@ -2,6 +2,9 @@
 - https://gitlab.com/flukejones/room4doom
   - https://ljones.dev/blog/room4doom-20220529/
 
+- tutorial eBook
+  - https://flukejones.gitlab.io/room4doom/room4doom/index.html
+
 <hr>
 
 # SDL2 이해하기
