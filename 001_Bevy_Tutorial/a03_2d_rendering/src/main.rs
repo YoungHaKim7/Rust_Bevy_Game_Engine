@@ -1,12 +1,31 @@
 //! Illustrates bloom post-processing in 2d.
 
 use bevy::{
+    app::{App, Startup, Update},
+    asset::{AssetServer, Assets},
     core_pipeline::{
         bloom::{BloomCompositeMode, BloomSettings},
+        core_2d::Camera2dBundle,
         tonemapping::Tonemapping,
     },
-    prelude::*,
-    sprite::MaterialMesh2dBundle,
+    ecs::{
+        entity::Entity,
+        query::With,
+        system::{Commands, Query, Res, ResMut},
+    },
+    input::{keyboard::KeyCode, ButtonInput},
+    math::{
+        primitives::{Circle, RegularPolygon},
+        Vec2, Vec3,
+    },
+    prelude::default,
+    render::{camera::Camera, color::Color, mesh::Mesh},
+    sprite::{ColorMaterial, MaterialMesh2dBundle, Sprite, SpriteBundle},
+    text::{Text, TextStyle},
+    time::Time,
+    transform::components::Transform,
+    ui::{node_bundles::TextBundle, PositionType, Style, Val},
+    DefaultPlugins,
 };
 
 fn setup(
