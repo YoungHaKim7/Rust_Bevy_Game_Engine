@@ -2,16 +2,25 @@
 
 use std::f32::consts::{PI, TAU};
 
-use bevy::prelude::*;
-
-fn main() {
-    App::new()
-        .add_plugins(DefaultPlugins)
-        .init_gizmo_group::<MyRoundGizmos>()
-        .add_systems(Startup, setup)
-        .add_systems(Update, (draw_example_collection, update_config))
-        .run();
-}
+use bevy::{
+    app::{App, Startup, Update},
+    asset::AssetServer,
+    core_pipeline::core_2d::Camera2dBundle,
+    ecs::system::{Commands, Res, ResMut},
+    gizmos::{
+        config::{DefaultGizmoConfigGroup, GizmoConfigGroup, GizmoConfigStore},
+        gizmos::Gizmos,
+        AppGizmoBuilder,
+    },
+    input::{keyboard::KeyCode, ButtonInput},
+    math::Vec2,
+    reflect::Reflect,
+    render::color::Color,
+    text::TextStyle,
+    time::Time,
+    ui::node_bundles::TextBundle,
+    DefaultPlugins,
+};
 
 // We can create our own gizmo config group!
 #[derive(Default, Reflect, GizmoConfigGroup)]
@@ -110,4 +119,13 @@ fn update_config(
     if keyboard.just_pressed(KeyCode::Digit2) {
         my_config.enabled ^= true;
     }
+}
+
+fn main() {
+    App::new()
+        .add_plugins(DefaultPlugins)
+        .init_gizmo_group::<MyRoundGizmos>()
+        .add_systems(Startup, setup)
+        .add_systems(Update, (draw_example_collection, update_config))
+        .run();
 }
