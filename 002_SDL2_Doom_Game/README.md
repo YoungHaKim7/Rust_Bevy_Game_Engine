@@ -14,3 +14,18 @@
 
 - SDL2 (Rust-SDL2)
   - https://github.com/Rust-SDL2/rust-sdl2
+
+# OpenGL 설치 되어 있는지 확인
+- Install & 확인
+```bash
+sudo apt-get install -y build-essential
+
+sudo apt-get install freeglut3-dev libglu1-mesa-dev mesa-common-dev
+
+sudo apt-get install mesa-utils
+
+$ glxinfo | grep "OpenGL version"
+OpenGL version string: 4.6.0 NVIDIA 535.183.01
+```
+
+- https://hjh1023.tistory.com/32
