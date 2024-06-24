@@ -22,6 +22,11 @@
 
 <hr>
 
+# Bevy GameEngine 최신 소식(thisweekinbevy)
+- https://thisweekinbevy.com/
+
+<hr>
+
 # Bevy GameEngine 최신 소식
 
 - Bevy 0-14-rc.2, Powerglove, and Soup - This Week in Bevy chris biscardi
