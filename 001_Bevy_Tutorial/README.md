@@ -30,7 +30,7 @@
 ```toml
 
 [build]
-rustflags = ["-Z", "threads=20"]
+rustflags = ["-Z", "threads=8"]
 
 [target.x86_64-unknown-linux-gnu]
 rustflags = ["-Zlinker-features=-lld"]
