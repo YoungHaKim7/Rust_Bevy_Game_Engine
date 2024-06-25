@@ -46,6 +46,8 @@ components = ["rustfmt", "rust-src"]
 ```
 
 
+<hr>
+
 - `change_detection.rs`
   - https://github.com/bevyengine/bevy/blob/main/crates/bevy_ecs/src/change_detection.rs
 ```rs
@@ -114,3 +116,28 @@ pub const MAX_CHANGE_AGE: u32 = u32::MAX - (2 * CHECK_TICK_THRESHOLD - 1);
 스캔 후 'u32::MAX - (2 * N - 1)'보다 오래된 변경 사항이 없는 경우 해당 연령대는 변경할 수 없습니다
 오버플로 및 오탐을 유발합니다.
 (518,400,000 = 프레임당 1000 틱 * 초당 144 프레임 * 시간당 3600초)
+
+- The maximum change tick difference that won't overflow before the next `check_tick` scan.
+
+Changes stop being detected once they become this old.
+pub const MAX_CHANGE_AGE: u32 = u32::MAX - (2 * CHECK_TICK_THRESHOLD - 1);
+
+Types that can read change detection information.
+ This change detection is controlled by [`DetectChangesMut`] types such as [`ResMut`].
+
+## Example
+Using types that implement [`DetectChanges`], such as [`Res`], provide a way to query if a value has been mutated in another system.
+
+  - 다음 'check_tick' 스캔 전에 넘치지 않는 최대 변경 틱 차이입니다.
+
+변경 사항은 이렇게 오래되면 감지되지 않습니다.
+pub const MAX_CHANGE_AGE: u32 = u32::MAX - (2 * CHECK_TICK_THRESH - 1);
+
+변경 탐지 정보를 읽을 수 있는 유형입니다.
+이 변경 감지는 [[ResMut]]와 같은 [[DetectChangesMut]] 유형에 의해 제어됩니다.
+
+## 예제
+[Res]와 같이 [[DetectChanges]를 구현하는 유형을 사용하여 값이 다른 시스템에서 변경되었는지 조회하는 방법을 제공합니다.
+
+<hr>
+
