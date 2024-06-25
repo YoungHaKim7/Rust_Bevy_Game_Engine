@@ -95,3 +95,22 @@ pub const MAX_CHANGE_AGE: u32 = u32::MAX - (2 * CHECK_TICK_THRESHOLD - 1);
 /// }
 /// ```
 ```
+
+- Types that detect when their internal data mutate.
+  - 내부 데이터가 변경되는 경우를 탐지하는 유형입니다.
+- The (arbitrarily chosen) minimum number of world tick increments between `check_tick` scans.
+
+ Change ticks can only be scanned when systems aren't running. Thus, if the threshold is `N`,
+ the maximum is `2 * N - 1` (i.e. the world ticks `N - 1` times, then `N` times).
+
+ If no change is older than `u32::MAX - (2 * N - 1)` following a scan, none of their ages can
+ overflow and cause false positives.
+ (518,400,000 = 1000 ticks per frame * 144 frames per second * 3600 seconds per hour)
+   - 'check_tick' 검색 사이의 (임의로 선택한) 최소 월드 틱 증분 수.
+
+변경 틱은 시스템이 실행되지 않을 때만 스캔할 수 있습니다. 따라서 임계값이 'N'이면,
+최대치는 2 * N - 1(즉, 세계 틱은 N - 1번, 그 다음은 N번)입니다.
+
+스캔 후 'u32::MAX - (2 * N - 1)'보다 오래된 변경 사항이 없는 경우 해당 연령대는 변경할 수 없습니다
+오버플로 및 오탐을 유발합니다.
+(518,400,000 = 프레임당 1000 틱 * 초당 144 프레임 * 시간당 3600초)
