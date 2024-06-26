@@ -5,6 +5,8 @@
 
 # Rust_Bevy_getting-started
 
+- https://affanshahid.dev/posts/learning-game-dev-bevy-1/
+
 - https://bevyengine.org/learn/quick-start/getting-started/ecs/
 
 - https://github.com/bevyengine/bevy/tree/latest/examples#examples
