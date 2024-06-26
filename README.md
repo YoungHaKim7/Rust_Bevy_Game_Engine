@@ -9,6 +9,11 @@
 
 <hr>
 
+# Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)
+- https://youtube.com/playlist?list=PLcMveqN_07mY5cEcTgC4ICHnla6LSVtnh&si=rtaqCCGuZhKpHLJs
+
+<hr>
+
 # BevyEngine(Rust)
 
 - https://bevyengine.org/
