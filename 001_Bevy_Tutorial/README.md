@@ -1,3 +1,8 @@
+# Rust By Example
+- [https://doc.rust-lang.org/rust-by-example/index.html](https://doc.rust-lang.org/rust-by-example/)
+
+<hr>
+
 # Rust_Bevy_getting-started
 
 - https://bevyengine.org/learn/quick-start/getting-started/ecs/
