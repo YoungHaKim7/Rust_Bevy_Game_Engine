@@ -15,6 +15,8 @@
 - SDL2 (Rust-SDL2)
   - https://github.com/Rust-SDL2/rust-sdl2
 
+<hr>
+
 # OpenGL 설치 되어 있는지 확인
 - Install & 확인
 ```bash
