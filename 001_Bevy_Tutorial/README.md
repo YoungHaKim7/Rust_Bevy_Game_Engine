@@ -39,6 +39,30 @@
 
 <hr>
 
+![Screenshot 2024-06-27 at 7 36 27 PM](https://github.com/YoungHaKim7/Cpp_Training/assets/67513038/857c8a4d-68ef-4fdb-9413-8077feaf7370)
+
+```rs
+    let shapes = [
+        Mesh2dHandle(meshes.add(Circle { radius: 50.0 })),
+        Mesh2dHandle(meshes.add(CircularSector::new(50.0, 1.0))),
+        Mesh2dHandle(meshes.add(CircularSegment::new(50.0, 1.25))),
+        Mesh2dHandle(meshes.add(Ellipse::new(25.0, 50.0))),
+        Mesh2dHandle(meshes.add(Annulus::new(25.0, 50.0))),
+        Mesh2dHandle(meshes.add(Capsule2d::new(25.0, 50.0))),
+        Mesh2dHandle(meshes.add(Rhombus::new(75.0, 100.0))),
+        Mesh2dHandle(meshes.add(Rectangle::new(50.0, 100.0))),
+        Mesh2dHandle(meshes.add(RegularPolygon::new(50.0, 6))),
+        Mesh2dHandle(meshes.add(Triangle2d::new(
+            Vec2::Y * 50.0,
+            Vec2::new(-50.0, -50.0),
+            Vec2::new(50.0, -50.0),
+        ))),
+    ];
+
+```
+
+<hr>
+
 # `Cargo.toml`일반적인 패턴
 
 ```toml
