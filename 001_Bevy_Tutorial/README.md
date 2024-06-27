@@ -28,6 +28,19 @@
 # Bevy 0-14-rc.2, Powerglove, and Soup - This Week in Bevy chris biscardi
 - https://youtu.be/5r90Z7Ec3Pw?si=8MLWedGjtK-x1BFS
 
+# `Cargo.toml`일반적인 패턴
+
+```toml
+[dependencies]
+bevy = {version = "0.14.0-dev"}
+
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+```
 
 # 컴파일 빠르게 만들기
 - Faster linking times on nightly on Linux using `rust-lld`
