@@ -24,6 +24,9 @@
 - (egui로 만든 Guess Game)
   - https://github.com/W4ff1e/rusty-hangman
 
+- (ratatui & crossterm) Play Pong inside the terminal. Made with Rust🦀
+  - https://github.com/Sem1Rose/pong-tui
+
 <hr>
 
 # 외국 사람의 Bevy Tutorial
