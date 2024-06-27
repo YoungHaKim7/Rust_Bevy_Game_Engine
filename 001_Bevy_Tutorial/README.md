@@ -32,6 +32,7 @@
 
 ![handedness](https://github.com/YoungHaKim7/Cpp_Training/assets/67513038/4a240cb3-5504-4bfa-926c-a6c511814204)
 
+- https://affanshahid.dev/posts/learning-game-dev-bevy-1/
 
 <hr>
 
