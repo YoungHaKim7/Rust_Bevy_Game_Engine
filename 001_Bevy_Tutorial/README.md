@@ -28,6 +28,13 @@
 # Bevy 0-14-rc.2, Powerglove, and Soup - This Week in Bevy chris biscardi
 - https://youtu.be/5r90Z7Ec3Pw?si=8MLWedGjtK-x1BFS
 
+<hr>
+
+![handedness](https://github.com/YoungHaKim7/Cpp_Training/assets/67513038/4a240cb3-5504-4bfa-926c-a6c511814204)
+
+
+<hr>
+
 # `Cargo.toml`일반적인 패턴
 
 ```toml
