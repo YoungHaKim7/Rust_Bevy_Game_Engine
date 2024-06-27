@@ -21,6 +21,9 @@
 - Minesweeper clone (지뢰찾기를 터미널에서 하네 ㅋㅋ)
   - https://github.com/BineSweeper/RustyMines
 
+- (egui로 만든 Guess Game)
+  - https://github.com/W4ff1e/rusty-hangman
+
 <hr>
 
 # 외국 사람의 Bevy Tutorial
