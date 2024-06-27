@@ -1,8 +1,28 @@
 //! Shows how to render simple primitive shapes with a single color.
 
 use bevy::{
-    prelude::*,
-    sprite::{MaterialMesh2dBundle, Mesh2dHandle, Wireframe2dConfig, Wireframe2dPlugin},
+    app::{App, Startup, Update},
+    asset::Assets,
+    color::Color,
+    core_pipeline::core_2d::Camera2dBundle,
+    ecs::system::{Commands, Res, ResMut},
+    input::{keyboard::KeyCode, ButtonInput},
+    math::{
+        primitives::{
+            Annulus, Capsule2d, Circle, CircularSector, CircularSegment, Ellipse, Rectangle,
+            RegularPolygon, Rhombus, Triangle2d,
+        },
+        Vec2,
+    },
+    prelude::default,
+    render::mesh::Mesh,
+    sprite::{
+        ColorMaterial, MaterialMesh2dBundle, Mesh2dHandle, Wireframe2dConfig, Wireframe2dPlugin,
+    },
+    text::TextStyle,
+    transform::components::Transform,
+    ui::{node_bundles::TextBundle, PositionType, Style, Val},
+    DefaultPlugins,
 };
 
 const X_EXTENT: f32 = 900.;
