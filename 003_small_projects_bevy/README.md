@@ -5,6 +5,10 @@
 - 베비로 만든거 괴물들이 많네 ㅋ Tiny Glade - Future Games Show 2023 Trailer | Ana & Tom
   - https://youtu.be/2-Pmal2UupI?si=fJTCbtA83GufPDau
 
+- Infinite-pong
+  - infinite-pong is an example project that uses bevy_xpbd_2d for collision and bevy_ecs_tilemap for individually addressable tile entities.
+    - https://github.com/rust-adventure/infinite-pong
+
 <hr>
 
 # 외국 사람의 Bevy Tutorial
