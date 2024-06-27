@@ -5,14 +5,6 @@ use bevy::{
     sprite::{MaterialMesh2dBundle, Mesh2dHandle, Wireframe2dConfig, Wireframe2dPlugin},
 };
 
-fn main() {
-    App::new()
-        .add_plugins((DefaultPlugins, Wireframe2dPlugin))
-        .add_systems(Startup, setup)
-        .add_systems(Update, toggle_wireframe)
-        .run();
-}
-
 const X_EXTENT: f32 = 900.;
 
 fn setup(
@@ -75,4 +67,12 @@ fn toggle_wireframe(
     if keyboard.just_pressed(KeyCode::Space) {
         wireframe_config.global = !wireframe_config.global;
     }
+}
+
+fn main() {
+    App::new()
+        .add_plugins((DefaultPlugins, Wireframe2dPlugin))
+        .add_systems(Startup, setup)
+        .add_systems(Update, toggle_wireframe)
+        .run();
 }
