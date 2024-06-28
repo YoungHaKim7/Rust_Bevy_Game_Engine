@@ -1,14 +1,17 @@
 //! Demonstrates how to use transparency in 2D.
 //! Shows 3 bevy logos on top of each other, each with a different amount of transparency.
 
-use bevy::prelude::*;
-
-fn main() {
-    App::new()
-        .add_plugins(DefaultPlugins)
-        .add_systems(Startup, setup)
-        .run();
-}
+use bevy::{
+    app::{App, Startup},
+    asset::AssetServer,
+    color::Color,
+    core_pipeline::core_2d::Camera2dBundle,
+    ecs::system::{Commands, Res},
+    prelude::default,
+    sprite::{Sprite, SpriteBundle},
+    transform::components::Transform,
+    DefaultPlugins,
+};
 
 fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
     commands.spawn(Camera2dBundle::default());
@@ -38,4 +41,11 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
         transform: Transform::from_xyz(200.0, 0.0, 0.0),
         ..default()
     });
+}
+
+fn main() {
+    App::new()
+        .add_plugins(DefaultPlugins)
+        .add_systems(Startup, setup)
+        .run();
 }
