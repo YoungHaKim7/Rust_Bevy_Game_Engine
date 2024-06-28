@@ -1,3 +1,45 @@
+# `Cargo.toml`일반적인 패턴
+
+```toml
+[dependencies]
+bevy = {version = "0.14.0-dev"}
+
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+```
+
+# 컴파일 빠르게 만들기
+- Faster linking times on nightly on Linux using `rust-lld`
+  - https://blog.rust-lang.org/2024/05/17/enabling-rust-lld-on-linux.html
+
+- `.cargo/config.toml`
+```toml
+
+[build]
+rustflags = ["-Z", "threads=8"]
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-Zlinker-features=-lld"]
+```
+
+- `rust-toolchain.toml` 
+
+```toml
+
+[toolchain]
+channel ="nightly"
+components = ["rustfmt", "rust-src"]
+```
+
+
+<hr>
+
+<hr>
+
 # Rust By Example
 - [https://doc.rust-lang.org/rust-by-example/index.html](https://doc.rust-lang.org/rust-by-example/)
 
@@ -60,46 +102,6 @@
     ];
 
 ```
-
-<hr>
-
-# `Cargo.toml`일반적인 패턴
-
-```toml
-[dependencies]
-bevy = {version = "0.14.0-dev"}
-
-
-[profile.dev]
-opt-level = 1
-
-[profile.dev.package."*"]
-opt-level = 3
-```
-
-# 컴파일 빠르게 만들기
-- Faster linking times on nightly on Linux using `rust-lld`
-  - https://blog.rust-lang.org/2024/05/17/enabling-rust-lld-on-linux.html
-
-- `.cargo/config.toml`
-```toml
-
-[build]
-rustflags = ["-Z", "threads=8"]
-
-[target.x86_64-unknown-linux-gnu]
-rustflags = ["-Zlinker-features=-lld"]
-```
-
-- `rust-toolchain.toml` 
-
-```toml
-
-[toolchain]
-channel ="nightly"
-components = ["rustfmt", "rust-src"]
-```
-
 
 <hr>
 
