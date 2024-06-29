@@ -1,14 +1,16 @@
 //! Displays a single [`Sprite`] tiled in a grid, with a scaling animation
 
-use bevy::prelude::*;
-
-fn main() {
-    App::new()
-        .add_plugins(DefaultPlugins)
-        .add_systems(Startup, setup)
-        .add_systems(Update, animate)
-        .run();
-}
+use bevy::{
+    app::{App, Startup, Update},
+    asset::AssetServer,
+    core_pipeline::core_2d::Camera2dBundle,
+    ecs::system::{Commands, Query, Res, ResMut, Resource},
+    math::Vec2,
+    prelude::default,
+    sprite::{ImageScaleMode, Sprite, SpriteBundle},
+    time::Time,
+    DefaultPlugins,
+};
 
 #[derive(Resource)]
 struct AnimationState {
@@ -47,4 +49,12 @@ fn animate(mut sprites: Query<&mut Sprite>, mut state: ResMut<AnimationState>, t
     for mut sprite in &mut sprites {
         sprite.custom_size = Some(Vec2::splat(state.current));
     }
+}
+
+fn main() {
+    App::new()
+        .add_plugins(DefaultPlugins)
+        .add_systems(Startup, setup)
+        .add_systems(Update, animate)
+        .run();
 }
