@@ -40,6 +40,10 @@ components = ["rustfmt", "rust-src"]
 
 <hr>
 
+# Bevy Github
+
+- https://github.com/bevyengine/bevy
+
 <hr>
 
 # Bevy API
