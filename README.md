@@ -13,6 +13,11 @@
 
 https://arewegameyet.rs/
 
+- 게임 종합적으로 다 정리중(Rust)
+  - https://github.com/YoungHaKim7/Rust_Game_Blender
+
+<hr>
+
 ## Game엔진들 다른 언어라 다 있다  굿 굿
 - https://www.dragonflydb.io/game-dev/engines/rust
 
