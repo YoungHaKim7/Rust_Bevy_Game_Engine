@@ -40,6 +40,13 @@ components = ["rustfmt", "rust-src"]
 
 <hr>
 
+<hr>
+
+# Bevy API
+- https://docs.rs/bevy/0.14.0-rc.4/bevy/index.html
+- Migration-guides
+  - https://bevyengine.org/learn/migration-guides/0-12-to-0-13/
+
 # Rust By Example
 - [https://doc.rust-lang.org/rust-by-example/index.html](https://doc.rust-lang.org/rust-by-example/)
 
