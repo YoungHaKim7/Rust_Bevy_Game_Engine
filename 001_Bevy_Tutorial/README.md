@@ -4,7 +4,6 @@
 [dependencies]
 bevy = {version = "0.14.0-dev"}
 
-
 [profile.dev]
 opt-level = 1
 
@@ -34,6 +33,16 @@ rustflags = ["-Zlinker-features=-lld"]
 channel ="nightly"
 components = ["rustfmt", "rust-src"]
 ```
+
+<hr>
+
+# sRGB Convert
+  - https://www.easyrgb.com/en/convert.php#inputFORM
+
+- Convert RGB to sRGB?
+  - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
+
+
 
 
 <hr>
