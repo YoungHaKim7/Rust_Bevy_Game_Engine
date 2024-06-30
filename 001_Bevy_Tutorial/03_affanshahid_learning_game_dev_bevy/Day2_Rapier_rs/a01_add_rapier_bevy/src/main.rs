@@ -25,7 +25,7 @@ const COLOR_PLAYER: Color = Color::INDIGO;
 
 const LIME_GREEN_COLOR: Color = Color::LIME_GREEN;
 const AQUA_COLOR: Color = Color::AQUAMARINE;
-const INDIAN_RED: Color = Color::ORANGE_RED;
+const ORANGE_RED: Color = Color::ORANGE_RED;
 
 fn setup(
     mut commands: Commands,
@@ -60,7 +60,7 @@ fn setup(
 
     commands.spawn(SpriteBundle {
         sprite: Sprite {
-            color: INDIAN_RED,
+            color: ORANGE_RED,
             ..Default::default()
         },
         transform: Transform {
