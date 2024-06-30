@@ -70,7 +70,6 @@ fn setup(
         ..Default::default()
     });
 
-    // let meshes = Circle::new(0.0);
     commands.spawn(MaterialMesh2dBundle {
         mesh: meshes.add(Circle::default()).into(),
         material: materials.add(ColorMaterial::from(COLOR_PLAYER)),
