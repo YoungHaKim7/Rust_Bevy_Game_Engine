@@ -18,6 +18,7 @@ const WINDOW_WIDTH: f32 = 1024.0;
 const WINDOW_HEIGHT: f32 = 720.0;
 
 const COLOR_BACKGROUND: Color = Color::BLACK;
+const COLOR_PLATFORM: Color = Color::ANTIQUE_WHITE;
 
 fn main() {
     App::new()

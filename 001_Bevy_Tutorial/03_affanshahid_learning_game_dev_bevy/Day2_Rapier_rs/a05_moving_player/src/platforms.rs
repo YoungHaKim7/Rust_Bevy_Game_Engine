@@ -1,16 +1,14 @@
 use bevy::{
     ecs::bundle::Bundle,
     math::Vec3,
-    render::color::Color,
     sprite::{Sprite, SpriteBundle},
     transform::components::Transform,
 };
 use bevy_rapier2d::prelude::{Collider, RigidBody};
 
-const WINDOW_HEIGHT: f32 = 720.0;
-const WINDOW_BOTTOM_Y: f32 = WINDOW_HEIGHT / -2.0;
+use crate::{COLOR_PLATFORM, WINDOW_HEIGHT};
 
-const COLOR_PLATFORM: Color = Color::ANTIQUE_WHITE;
+const WINDOW_BOTTOM_Y: f32 = WINDOW_HEIGHT / -2.0;
 
 #[derive(Bundle)]
 pub struct PlatformBundle {
