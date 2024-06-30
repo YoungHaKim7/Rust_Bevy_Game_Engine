@@ -1,164 +1,23 @@
 use bevy::{
     app::{App, Startup, Update},
-    asset::Assets,
-    ecs::system::{Commands, Query, Res, ResMut},
-    input::{keyboard::KeyCode, ButtonInput},
-    math::{primitives::Circle, Vec2, Vec3},
-    prelude::{default, Camera2dBundle, ClearColor, ColorMaterial, PluginGroup},
-    render::{color::Color, mesh::Mesh},
-    sprite::{MaterialMesh2dBundle, Sprite, SpriteBundle},
-    time::Time,
-    transform::components::Transform,
+    prelude::{ClearColor, PluginGroup},
+    render::color::Color,
     window::{Window, WindowPlugin, WindowResolution},
     DefaultPlugins,
 };
-
 use bevy_rapier2d::{
-    control::KinematicCharacterController,
-    prelude::{Collider, NoUserData, RapierDebugRenderPlugin, RapierPhysicsPlugin, RigidBody},
+    plugin::{NoUserData, RapierPhysicsPlugin},
+    render::RapierDebugRenderPlugin,
 };
-use platforms::PlatformBundle;
+use player::{movement, setup};
 
 mod platforms;
+mod player;
 
 const WINDOW_WIDTH: f32 = 1024.0;
 const WINDOW_HEIGHT: f32 = 720.0;
 
-const WINDOW_BOTTOM_Y: f32 = WINDOW_HEIGHT / -2.0;
-const WINDOW_LEFT_X: f32 = WINDOW_WIDTH / -2.0;
-
-const PLAYER_VELOCITY_X: f32 = 400.0;
-
 const COLOR_BACKGROUND: Color = Color::BLACK;
-const COLOR_PLATFORM: Color = Color::ANTIQUE_WHITE;
-const COLOR_PLAYER: Color = Color::INDIGO;
-
-const FLOOR_THICKNESS: f32 = 10.0;
-const COLOR_FLOOR: Color = Color::rgb(0.45, 0.55, 0.66);
-
-const LIME_GREEN_COLOR: Color = Color::LIME_GREEN;
-const AQUA_COLOR: Color = Color::AQUAMARINE;
-const ORANGE_RED: Color = Color::ORANGE_RED;
-
-fn setup(
-    mut commands: Commands,
-    mut meshes: ResMut<Assets<Mesh>>,
-    mut materials: ResMut<Assets<ColorMaterial>>,
-) {
-    commands.spawn(PlatformBundle::new(-100.0, Vec3::new(75.0, 200.0, 1.0)));
-    commands.spawn(PlatformBundle::new(100.0, Vec3::new(50.0, 350.0, 1.0)));
-    commands.spawn(PlatformBundle::new(350.0, Vec3::new(150.0, 250.0, 1.0)));
-
-    commands
-        .spawn(MaterialMesh2dBundle {
-            mesh: meshes.add(Circle::default()).into(),
-            material: materials.add(ColorMaterial::from(COLOR_PLAYER)),
-            transform: Transform {
-                translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 30.0, 0.0),
-                scale: Vec3::new(30.0, 30.0, 1.0),
-                ..Default::default()
-            },
-            ..default()
-        })
-        .insert(RigidBody::KinematicPositionBased)
-        .insert(Collider::ball(0.5))
-        .insert(KinematicCharacterController::default());
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: LIME_GREEN_COLOR,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(-100.0, 0.0, 0.0),
-                scale: Vec3::new(75.0, 200.0, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Dynamic)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: AQUA_COLOR,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(100.0, 0.0, 0.0),
-                scale: Vec3::new(50.0, 350.0, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Dynamic)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: ORANGE_RED,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(350.0, 0.0, 0.0),
-                scale: Vec3::new(150.0, 250.0, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Dynamic)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: COLOR_FLOOR,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(0.0, WINDOW_BOTTOM_Y + (FLOOR_THICKNESS / 2.0), 0.0),
-                scale: Vec3::new(WINDOW_WIDTH, FLOOR_THICKNESS, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Fixed)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands.spawn(MaterialMesh2dBundle {
-        mesh: meshes.add(Circle::default()).into(),
-        material: materials.add(ColorMaterial::from(COLOR_PLAYER)),
-        transform: Transform {
-            translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 30.0, 0.0),
-            scale: Vec3::new(30.0, 30.0, 1.0),
-            ..Default::default()
-        },
-        ..default()
-    });
-    commands.spawn(Camera2dBundle::default());
-}
-
-fn movement(
-    input: Res<ButtonInput<KeyCode>>,
-    time: Res<Time>,
-    mut query: Query<&mut KinematicCharacterController>,
-) {
-    let mut player = query.single_mut();
-
-    let mut translation = Vec2::new(0.0, 0.0);
-
-    if input.pressed(KeyCode::ArrowRight) {
-        translation.x += time.delta_seconds() * PLAYER_VELOCITY_X;
-    }
-
-    if input.pressed(KeyCode::ArrowLeft) {
-        translation.x += time.delta_seconds() * PLAYER_VELOCITY_X * -1.0;
-    }
-
-    player.translation = Some(translation);
-}
 
 fn main() {
     App::new()
