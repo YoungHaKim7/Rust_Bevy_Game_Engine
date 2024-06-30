@@ -17,6 +17,8 @@ const WINDOW_BOTTOM_Y: f32 = WINDOW_HEIGHT / -2.0;
 // const WINDOW_LEFT_X: f32 = WINDOW_WIDTH / -2.0;
 
 const LIME_GREEN_COLOR: Color = Color::srgba(0.19608, 0.80392, 0.01961, 1.0);
+const AQUA_COLOR: Color = Color::hsl(180.0, 1.00, 0.5);
+const INDIAN_RED: Color = Color::srgba(0.80392, 0.36078, 0.36078, 1.0);
 
 fn setup(mut commands: Commands) {
     commands.spawn(SpriteBundle {
@@ -34,7 +36,7 @@ fn setup(mut commands: Commands) {
 
     commands.spawn(SpriteBundle {
         sprite: Sprite {
-            color: Color::srgba(10.0, 0.0, 0.0, 1.0),
+            color: AQUA_COLOR,
             ..Default::default()
         },
         transform: Transform {
@@ -47,7 +49,7 @@ fn setup(mut commands: Commands) {
 
     commands.spawn(SpriteBundle {
         sprite: Sprite {
-            color: Color::srgba(10.0, 0.0, 0.0, 1.0),
+            color: INDIAN_RED,
             ..Default::default()
         },
         transform: Transform {
