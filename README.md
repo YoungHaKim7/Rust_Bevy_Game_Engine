@@ -45,6 +45,8 @@ https://arewegameyet.rs/
 - RGB 누가 만든거 대단
   - https://rockyshore73.tistory.com/2    
 
+- 색 전문가 github https://github.com/Myndex
+
 - Convert RGB to sRGB?
   - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
   - 소수점으로 쓰는거
