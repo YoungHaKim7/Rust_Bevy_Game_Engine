@@ -27,6 +27,17 @@ https://arewegameyet.rs/
 
 <hr>
 
+# Color컬러 코딩이해하기
+
+# sRGB Convert
+  - https://www.easyrgb.com/en/convert.php#inputFORM
+
+- Convert RGB to sRGB?
+  - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
+- https://www.rapidtables.com/web/color/RGB_Color.html
+
+<hr>
+
 # Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)
 
 - https://youtube.com/playlist?list=PLcMveqN_07mY5cEcTgC4ICHnla6LSVtnh&si=rtaqCCGuZhKpHLJs
