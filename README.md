@@ -36,7 +36,12 @@ https://arewegameyet.rs/
 # Color컬러 코딩이해하기
 
 # sRGB Convert
-  - https://www.easyrgb.com/en/convert.php#inputFORM
+- https://www.easyrgb.com/en/convert.php#inputFORM
+  - sRGB계산법
+    - Eng. Ver.
+      - https://learn.microsoft.com/en-us/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
+    - https://learn.microsoft.com/ko-kr/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
+    
 
 - Convert RGB to sRGB?
   - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
