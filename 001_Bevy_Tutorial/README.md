@@ -41,9 +41,7 @@ components = ["rustfmt", "rust-src"]
 
 - Convert RGB to sRGB?
   - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
-
-
-
+- https://www.rapidtables.com/web/color/RGB_Color.html
 
 <hr>
 
