@@ -53,6 +53,9 @@ https://arewegameyet.rs/
     - https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html
 - https://www.rapidtables.com/web/color/RGB_Color.html
 
+![color_roadmap](https://github.com/YoungHaKim7/Cpp_Training/assets/67513038/205a8f09-f3e6-4a4d-91d2-7d3284a40882)
+- https://community.adobe.com/t5/premiere-pro-discussions/premiere-pro-%EA%B2%8C%EC%8B%9C%ED%8C%90%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%B4-%EB%B3%B8-%EA%B2%8C%EC%8B%9C%EB%AC%BC-top-5-%ED%95%9C%EA%B5%AD%ED%8E%B8/td-p/14573189?profile.language=ko
+
 <hr>
 
 # Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)
