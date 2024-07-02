@@ -41,7 +41,9 @@ https://arewegameyet.rs/
     - Eng. Ver.
       - https://learn.microsoft.com/en-us/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
     - https://learn.microsoft.com/ko-kr/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
-    
+
+- RGB 누가 만든거 대단
+  - https://rockyshore73.tistory.com/2    
 
 - Convert RGB to sRGB?
   - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
