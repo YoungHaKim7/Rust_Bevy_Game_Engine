@@ -40,6 +40,8 @@ https://arewegameyet.rs/
 
 - Convert RGB to sRGB?
   - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
+  - 소수점으로 쓰는거
+    - https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html
 - https://www.rapidtables.com/web/color/RGB_Color.html
 
 <hr>
