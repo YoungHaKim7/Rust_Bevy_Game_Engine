@@ -9,6 +9,10 @@
 
 <hr>
 
+- [#color컬러-코딩이해하기RGB이해](#color컬러-코딩이해하기)
+
+<hr>
+
 # Are we Game yet?
 
 https://arewegameyet.rs/
