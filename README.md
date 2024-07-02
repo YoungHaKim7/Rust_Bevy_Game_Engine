@@ -9,7 +9,9 @@
 
 <hr>
 
-- [#color컬러-코딩이해하기RGB이해](#color컬러-코딩이해하기)
+# link
+
+- [color컬러-코딩이해하기RGB이해](#color컬러-코딩이해하기)
 
 <hr>
 
