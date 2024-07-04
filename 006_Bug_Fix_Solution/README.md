@@ -1,3 +1,9 @@
+# Windows API 공부하기
+- https://github.com/MicrosoftDocs/win32/blob/docs/desktop-src/desktop-programming.md
+
+<hr>
+
+
 # What is the Smallest Possible .EXE? | Inkbox(11분 30초정도 부터 나옴)
 - Windows에서 키 2번 눌리는 버그 해결하는거 찾음
   - https://youtu.be/5_UCkcb7iGY?si=dHWzwRQMOxNn_1eS
