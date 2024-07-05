@@ -72,8 +72,13 @@ https://arewegameyet.rs/
 
 # (실사에 가까운 Assets만들기) 잔디를 고화질 카메라로 찍은 후에 Assets파일 만들기
 - https://youtu.be/7Um3FaXJixg?si=CZWSId9pGWduhYVA
-  - 실제 현실인지 분간이 안가는 신작 FPS 게임이 나왔다... 미친거 아니야 요즘 기술력? | 00231
-    - https://youtu.be/UgAqWwDOXUw?si=_p7DzBKFHqVbzKDU
+
+<hr>
+
+- 실제 현실인지 분간이 안가는 신작 FPS 게임이 나왔다... 미친거 아니야 요즘 기술력? | 00231
+  - https://youtu.be/UgAqWwDOXUw?si=_p7DzBKFHqVbzKDU
+
+<hr>
 
 # Bevy 0.14 Color 코딩 패턴(snippets)[[🔝]](#link)
 
