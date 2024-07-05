@@ -123,7 +123,9 @@ const LIME_GREEN_COLOR: Color = Color::LIME_GREEN;
 
 # Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)
 
-- https://youtube.com/playlist?list=PLcMveqN_07mY5cEcTgC4ICHnla6LSVtnh&si=rtaqCCGuZhKpHLJs
+- https://github.com/YoungHaKim7/Rust_Game_Blender
+- 내가 만든 영상 모아보기(Rust Game Dev.)
+  - https://youtube.com/playlist?list=PLcMveqN_07mY5cEcTgC4ICHnla6LSVtnh&si=rtaqCCGuZhKpHLJs
 
 <hr>
 
