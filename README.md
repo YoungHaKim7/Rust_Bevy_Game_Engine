@@ -20,7 +20,7 @@
 
 <hr>
 
-# Are we Game yet?
+# Are we Game yet?[[🔝]](#link)
 
 https://arewegameyet.rs/
 
