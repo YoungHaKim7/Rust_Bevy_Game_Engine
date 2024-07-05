@@ -121,7 +121,61 @@ const LIME_GREEN_COLOR: Color = Color::LIME_GREEN;
 
 <hr>
 
-# Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)
+# Rust 게임개발 기본 구성(Assets폴더 구성하기)[[🔝]](#link) 
+
+- 외국 사람의 Github 참고 
+
+  - https://github.com/DigitalExtinction/Game
+
+- Assets 파일 대략 구성 
+
+```
+$ tree
+.
+├── audio
+│   ├── music
+│   │   └── menu_loop.mp3
+│   └── sounds
+│       ├── construct.ogg
+│       ├── destruction_building.ogg
+│       ├── destruction_unit.ogg
+│       ├── laser.ogg
+│       └── manufacture.ogg
+├── fonts
+│   └── Fira_Mono
+│       ├── FiraMono-Medium.ttf
+│       └── LICENSE
+├── maps
+│   ├── 8a9d5f0e522cc1aac64c45f0d4da353eccb410a00c04c84a23788e5ca5c01e2e.dem.tar
+│   └── c653d17ba9a26c2d58c8a8723f37c881971207c330853764441a16df35ec7521.dem.tar
+├── models
+│   ├── attacker.glb
+│   ├── base.glb
+│   ├── pole.glb
+│   ├── powerhub.glb
+│   └── tree.glb
+├── objects
+│   ├── attacker.obj.json
+│   ├── base.obj.json
+│   ├── powerhub.obj.json
+│   └── tree.obj.json
+├── shaders
+│   ├── bar.wgsl
+│   ├── rally_point.wgsl
+│   ├── terrain.wgsl
+│   └── trail.wgsl
+└── textures
+    ├── skybox.png
+    └── terrain.png
+
+11 directories, 25 files
+```
+
+- ogg 소리 파일 공부 https://cloudinary.com/guides/video-formats/ogg-format-an-in-depth-look
+
+<hr>
+
+# Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)[[🔝]](#link)
 
 - https://github.com/YoungHaKim7/Rust_Game_Blender
 - 내가 만든 영상 모아보기(Rust Game Dev.)
