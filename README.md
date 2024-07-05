@@ -56,6 +56,35 @@ https://arewegameyet.rs/
 ![color_roadmap](https://github.com/YoungHaKim7/Cpp_Training/assets/67513038/205a8f09-f3e6-4a4d-91d2-7d3284a40882)
 - https://community.adobe.com/t5/premiere-pro-discussions/premiere-pro-%EA%B2%8C%EC%8B%9C%ED%8C%90%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%B4-%EB%B3%B8-%EA%B2%8C%EC%8B%9C%EB%AC%BC-top-5-%ED%95%9C%EA%B5%AD%ED%8E%B8/td-p/14573189?profile.language=ko
 
+# Bevy 0.14 Color 코딩 패턴(snippets)
+
+```rs
+// 상수로 지정해 쓰는 스타일
+const COLOR_BACKGROUND: Color = Color::srgba(0.29, 0.31, 0.41, 1.0);
+const COLOR_PLATFORM: Color = Color::srgba(0.13, 0.13, 0.23, 1.0);
+const COLOR_PLAYER: Color = Color::srgba(0.60, 0.55, 0.60, 1.0);
+
+const LIME_GREEN_COLOR: Color = Color::srgba(0.19608, 0.80392, 0.01961, 1.0);
+const AQUA_COLOR: Color = Color::hsl(180.0, 1.00, 0.5);
+const INDIAN_RED: Color = Color::srgba(0.80392, 0.36078, 0.36078, 1.0);
+
+
+// --------------
+// sRBG로 컬러 지정
+// 그냥 선언해서 1회용으로 쓰는 스타일
+// LIME_GREEN
+Color::srgba(0.19608, 0.80392, 0.01961, 1.0);
+
+// INDIAN_RED
+Color::srgba(0.80392, 0.36078, 0.36078, 1.0);
+
+
+// ------
+// hsl로 컬러 지정
+// AQUA_COLOR
+Color = Color::hsl(180.0, 1.00, 0.5);
+```
+
 <hr>
 
 # Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)
