@@ -125,6 +125,7 @@ const LIME_GREEN_COLOR: Color = Color::LIME_GREEN;
 # Rust Bevy Game Engine Migration Guide[[🔝]](#link)
 
 - Migration Guide: 0.12 to 0.13
+  - https://bevyengine.org/learn/migration-guides/0-12-to-0-13/
 
 <hr>
 
