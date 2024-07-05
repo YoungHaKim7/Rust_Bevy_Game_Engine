@@ -22,6 +22,8 @@
 - [color컬러-코딩이해하기RGB이해](#color컬러-코딩이해하기)
   - [bevy-0.14-color-코딩-패턴snippets](#bevy-014-color-코딩-패턴snippets)
 
+- [rust--blender-로-게임-만드는-demo영상](#rust--blender-로-게임-만드는-demo영상)
+
 <hr>
 
 # Are we Game yet?[[🔝]](#link)
