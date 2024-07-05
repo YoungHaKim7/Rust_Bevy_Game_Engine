@@ -12,11 +12,12 @@
 # link
 
 - [(통합본)rust_game_dev--globalyoung정리중-모아보기](#rust_game_dev--globalyoung정리중-모아보기)
-- [버젼업_되면_여기부터_체크_rust-bevy-game-engine-migration-guide](#rust-bevy-game-engine-migration-guide)
+
 
 <hr>
 
 - [러스트_베비_게임엔진_Bevy-gameengine-최신-소식This-Week-in-Bevy](#bevy-gameengine-최신-소식thisweekinbevy)
+- [Bevy버젼업_되면_여기부터_체크_rust-bevy-game-engine-migration-guide](#rust-bevy-game-engine-migration-guide)
 
 <hr>
 
