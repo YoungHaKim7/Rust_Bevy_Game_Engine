@@ -69,6 +69,9 @@ https://arewegameyet.rs/
 
 # Bevy 0.14 Color 코딩 패턴(snippets)[[🔝]](#link)
 
+- 변환은 여기서 해서 색깔을 찾으면 된다. 굿
+  - https://www.easyrgb.com/en/convert.php#inputFORM
+
 ```rs
 // 상수로 지정해 쓰는 스타일
 const COLOR_BACKGROUND: Color = Color::srgba(0.29, 0.31, 0.41, 1.0);
