@@ -27,20 +27,20 @@ https://arewegameyet.rs/
 - 게임 종합적으로 다 정리중(Rust)
   - https://github.com/YoungHaKim7/Rust_Game_Blender
 
-# 게임 물리엔진
+# 게임 물리엔진[[🔝]](#link)
 - https://arewegameyet.rs/ecosystem/physics/
 
 <hr>
 
-## Game엔진들 다른 언어라 다 있다  굿 굿
+## Game엔진들 다른 언어라 다 있다  굿 굿[[🔝]](#link)
 
 - https://www.dragonflydb.io/game-dev/engines/rust
 
 <hr>
 
-# Color컬러 코딩이해하기
+# Color컬러 코딩이해하기[[🔝]](#link)
 
-# sRGB Convert
+# sRGB Convert[[🔝]](#link)
 - https://www.easyrgb.com/en/convert.php#inputFORM
   - sRGB계산법
     - Eng. Ver.
@@ -61,7 +61,7 @@ https://arewegameyet.rs/
 ![color_roadmap](https://github.com/YoungHaKim7/Cpp_Training/assets/67513038/205a8f09-f3e6-4a4d-91d2-7d3284a40882)
 - https://community.adobe.com/t5/premiere-pro-discussions/premiere-pro-%EA%B2%8C%EC%8B%9C%ED%8C%90%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%B4-%EB%B3%B8-%EA%B2%8C%EC%8B%9C%EB%AC%BC-top-5-%ED%95%9C%EA%B5%AD%ED%8E%B8/td-p/14573189?profile.language=ko
 
-# Bevy 0.14 Color 코딩 패턴(snippets)
+# Bevy 0.14 Color 코딩 패턴(snippets)[[🔝]](#link)
 
 ```rs
 // 상수로 지정해 쓰는 스타일
@@ -98,7 +98,7 @@ Color = Color::hsl(180.0, 1.00, 0.5);
 
 <hr>
 
-# BevyEngine(Rust)
+# BevyEngine(Rust)[[🔝]](#link)
 
 - Bevy Github
   - https://github.com/bevyengine/bevy
@@ -114,12 +114,12 @@ Color = Color::hsl(180.0, 1.00, 0.5);
 
 <hr>
 
-# Bevy GameEngine 최신 소식(thisweekinbevy)
+# Bevy GameEngine 최신 소식(thisweekinbevy)[[🔝]](#link)
 - https://thisweekinbevy.com/
 
 <hr>
 
-# Bevy GameEngine 최신 소식
+# Bevy GameEngine 최신 소식[[🔝]](#link)
 
 - Bevy 0-14-rc.2, Powerglove, and Soup - This Week in Bevy chris biscardi
   - https://youtu.be/5r90Z7Ec3Pw?si=8MLWedGjtK-x1BFS
