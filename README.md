@@ -96,6 +96,13 @@ Color::srgba(0.80392, 0.36078, 0.36078, 1.0);
 Color = Color::hsl(180.0, 1.00, 0.5);
 ```
 
+- Bevy 0.13 스타일 코딩
+```rs
+const COLOR_FLOOR: Color = Color::rgb(0.45, 0.55, 0.66);
+
+const LIME_GREEN_COLOR: Color = Color::LIME_GREEN;
+```
+
 <hr>
 
 # Rust_Game_Dev | GlobalYoung(정리중.. 모아보기)
