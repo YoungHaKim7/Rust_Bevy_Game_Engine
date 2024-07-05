@@ -11,6 +11,10 @@
 
 # link
 
+- [(통합본)rust_game_dev--globalyoung정리중-모아보기](#rust_game_dev--globalyoung정리중-모아보기)
+
+<hr>
+
 - [color컬러-코딩이해하기RGB이해](#color컬러-코딩이해하기)
   - [bevy-0.14-color-코딩-패턴snippets](#bevy-014-color-코딩-패턴snippets)
 
