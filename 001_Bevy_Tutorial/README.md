@@ -58,6 +58,11 @@ components = ["rustfmt", "rust-src"]
 - Migration-guides
   - https://bevyengine.org/learn/migration-guides/0-12-to-0-13/
 
+<hr>
+
+# Bevy + Blender
+- https://github.com/rust-adventure/yt-bevy-blender
+
 # Rust By Example
 - [https://doc.rust-lang.org/rust-by-example/index.html](https://doc.rust-lang.org/rust-by-example/)
 
