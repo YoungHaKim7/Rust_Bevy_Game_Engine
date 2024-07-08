@@ -1,10 +1,11 @@
 use bevy::{
     app::{App, Startup},
     asset::Assets,
+    color::Color,
     ecs::system::{Commands, ResMut},
     math::Vec3,
     prelude::{default, Camera2dBundle, Circle, ClearColor, ColorMaterial, PluginGroup},
-    render::{color::Color, mesh::Mesh},
+    render::mesh::Mesh,
     sprite::{MaterialMesh2dBundle, Sprite, SpriteBundle},
     transform::components::Transform,
     window::{Window, WindowPlugin, WindowResolution},
@@ -22,15 +23,16 @@ const WINDOW_BOTTOM_Y: f32 = WINDOW_HEIGHT / -2.0;
 const WINDOW_LEFT_X: f32 = WINDOW_WIDTH / -2.0;
 
 const COLOR_BACKGROUND: Color = Color::BLACK;
-const COLOR_PLATFORM: Color = Color::ANTIQUE_WHITE;
-const COLOR_PLAYER: Color = Color::INDIGO;
+const COLOR_PLATFORM: Color = Color::WHITE;
+const COLOR_PLAYER: Color = ORANGE_RED;
 
 const FLOOR_THICKNESS: f32 = 10.0;
-const COLOR_FLOOR: Color = Color::rgb(0.45, 0.55, 0.66);
+const COLOR_FLOOR: Color = Color::srgba(0.66275, 0.66275, 0.66275, 1.0);
 
-const LIME_GREEN_COLOR: Color = Color::LIME_GREEN;
-const AQUA_COLOR: Color = Color::AQUAMARINE;
-const ORANGE_RED: Color = Color::ORANGE_RED;
+const LIME_GREEN_COLOR: Color = Color::srgba(0.19608, 0.80392, 0.01961, 1.0);
+
+const AQUA_COLOR: Color = Color::hsl(180.0, 1.00, 0.5);
+const ORANGE_RED: Color = Color::srgba(1.0, 0.26667, 0.20000, 1.0);
 
 fn setup(
     mut commands: Commands,
