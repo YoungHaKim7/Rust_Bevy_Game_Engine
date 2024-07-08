@@ -1,7 +1,7 @@
 use bevy::{
     app::{App, Startup, Update},
+    color::Color,
     prelude::{ClearColor, PluginGroup},
-    render::color::Color,
     window::{Window, WindowPlugin, WindowResolution},
     DefaultPlugins,
 };
@@ -17,8 +17,13 @@ mod player;
 const WINDOW_WIDTH: f32 = 1024.0;
 const WINDOW_HEIGHT: f32 = 720.0;
 
-const COLOR_BACKGROUND: Color = Color::BLACK;
-const COLOR_PLATFORM: Color = Color::ANTIQUE_WHITE;
+const COLOR_BACKGROUND: Color = BLACK_COLOR;
+const COLOR_PLATFORM: Color = WHITE_COLOR;
+
+const BLACK_COLOR: Color = Color::srgba(0.0, 0.0, 0.0, 1.0);
+const WHITE_COLOR: Color = Color::srgba(1.0, 1.0, 1.0, 1.0);
+
+const LIME_GREEN_COLOR: Color = Color::srgba(0.19608, 0.80392, 0.01961, 1.0);
 
 fn main() {
     App::new()
