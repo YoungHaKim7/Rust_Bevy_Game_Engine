@@ -8,3 +8,5 @@
 - https://github.com/bevyengine/bevy/blob/latest/examples/2d/sprite_sheet.rs
 
 - https://github.com/bevyengine/bevy/blob/latest/examples/2d/sprite_animation.rs
+
+- https://github.com/bevyengine/bevy/blob/latest/examples/2d/texture_atlas.rs
