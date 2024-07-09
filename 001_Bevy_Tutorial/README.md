@@ -39,6 +39,12 @@ components = ["rustfmt", "rust-src"]
 # sRGB Convert
   - https://www.easyrgb.com/en/convert.php#inputFORM
 
+  - https://convertingcolors.com/cmyk-color-0.13_0.13_0.00_0.31.html
+    - `CMYK(0.13, 0.13,0.00,0.31)`
+  ```rs
+  const COLOR_BACKGROUND: Color = Color::rgb(0.13, 0.13, 0.23);
+  ```
+
 - Convert RGB to sRGB?
   - https://stackoverflow.com/questions/35952564/convert-rgb-to-srgb
 - https://www.rapidtables.com/web/color/RGB_Color.html
