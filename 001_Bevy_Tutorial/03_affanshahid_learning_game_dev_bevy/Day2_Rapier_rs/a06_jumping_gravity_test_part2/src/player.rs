@@ -258,7 +258,7 @@ fn update_sprite_direction(mut query: Query<(&mut TextureAtlas, &Direction)>) {
     let (mut sprite, direction) = query.single_mut();
 
     match direction {
-        Direction::Right => sprite.flip_x = false,
+        Direction::Right => sprite.flip_y = false,
         Direction::Left => sprite.flip_x = true,
     }
 }

@@ -357,43 +357,56 @@ struct Jump(f32);
 
 fn setup(
     mut commands: Commands,
-    mut atlases: ResMut<Assets<TextureAtlas>>,
-    server: Res<AssetServer>,
+    // mut atlases: ResMut<Assets<TextureAtlas>>,
+    asset_server: Res<AssetServer>,
 ) {
-    let image_handle: Handle<Image> = server.load("spritesheets/spritesheet_players.png");
-    let texture_atlas = TextureAtlas::from_grid(
-        image_handle,
-        Vec2::new(SPRITE_TILE_WIDTH, SPRITE_TILE_HEIGHT),
-        SPRITESHEET_COLS,
-        SPRITESHEET_ROWS,
-        None,
-        None,
-    );
-    let atlas_handle = atlases.add(texture_atlas);
-
-    commands.spawn((
-        TextureAtlas {
-            layout,
-            index,
-            // sprite: TextureAtlasSprite::new(SPRITE_IDX_STAND),
-            // transform: Transform {
-            //     translation: Vec3::new(-400.0, -300.0, 0.0),
-            //     scale: Vec3::new(
-            //         SPRITE_RENDER_WIDTH / SPRITE_TILE_WIDTH,
-            //         SPRITE_RENDER_HEIGHT / SPRITE_TILE_HEIGHT,
-            //         1.0,
-            //     ),
-            //     ..Default::default()
-            // },
-            // texture_atlas: atlas_handle,
-            ..Default::default()
+    commands.spawn(Camera2dBundle::default());
+    commands.spawn(SpriteBundle {
+        texture: asset_server.load("spritesheets/spritesheet_players.png"),
+        sprite: Sprite {
+            // Flip the logo to the left
+            flip_x: true,
+            // And don't flip it upside-down ( the default )
+            flip_y: false,
+            ..default()
         },
-        RigidBody::KinematicPositionBased,
-        Collider::cuboid(SPRITE_TILE_WIDTH / 2.0, SPRITE_TILE_HEIGHT / 2.0),
-        KinematicCharacterController::default(),
-        Direction::Right,
-    ));
+        ..default()
+    });
 }
+// let image_handle: Handle<Image> = server.load("spritesheets/spritesheet_players.png");
+// let texture_atlas = TextureAtlas::from_grid(
+//     image_handle,
+//     Vec2::new(SPRITE_TILE_WIDTH, SPRITE_TILE_HEIGHT),
+//     SPRITESHEET_COLS,
+//     SPRITESHEET_ROWS,
+//     None,
+//     None,
+// );
+// let atlas_handle = atlases.add(texture_atlas);
+
+// commands.spawn((
+//     TextureAtlas {
+//         layout,
+//         index,
+//         // sprite: TextureAtlasSprite::new(SPRITE_IDX_STAND),
+//         // transform: Transform {
+//         //     translation: Vec3::new(-400.0, -300.0, 0.0),
+//         //     scale: Vec3::new(
+//         //         SPRITE_RENDER_WIDTH / SPRITE_TILE_WIDTH,
+//         //         SPRITE_RENDER_HEIGHT / SPRITE_TILE_HEIGHT,
+//         //         1.0,
+//         //     ),
+//         //     ..Default::default()
+//         // },
+//         // texture_atlas: atlas_handle,
+//         ..Default::default()
+//     },
+//     RigidBody::KinematicPositionBased,
+//     Collider::cuboid(SPRITE_TILE_WIDTH / 2.0, SPRITE_TILE_HEIGHT / 2.0),
+//     KinematicCharacterController::default(),
+//     Direction::Right,
+// ));
+// }
 
 pub fn movement(
     input: Res<ButtonInput<KeyCode>>,
@@ -404,11 +417,11 @@ pub fn movement(
 
     let mut movement = 0.0;
 
-    if input.pressed(KeyCode::Right) {
+    if input.pressed(KeyCode::ArrowRight) {
         movement += time.delta_seconds() * PLAYER_VELOCITY_X;
     }
 
-    if input.pressed(KeyCode::Left) {
+    if input.pressed(KeyCode::ArrowLeft) {
         movement += time.delta_seconds() * PLAYER_VELOCITY_X * -1.0;
     }
 
