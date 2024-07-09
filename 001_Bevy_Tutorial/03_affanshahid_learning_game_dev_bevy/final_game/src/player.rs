@@ -89,7 +89,7 @@ fn setup(
 }
 
 fn movement(
-    input: Res<Input<KeyCode>>,
+    input: Res<ButtonInput<KeyCode>>,
     time: Res<Time>,
     mut query: Query<&mut KinematicCharacterController>,
 ) {
@@ -97,11 +97,11 @@ fn movement(
 
     let mut movement = 0.0;
 
-    if input.pressed(KeyCode::Right) {
+    if input.pressed(KeyCode::ArrowRight) {
         movement += time.delta_seconds() * PLAYER_VELOCITY_X;
     }
 
-    if input.pressed(KeyCode::Left) {
+    if input.pressed(KeyCode::ArrowLeft) {
         movement += time.delta_seconds() * PLAYER_VELOCITY_X * -1.0;
     }
 
@@ -115,7 +115,7 @@ fn movement(
 struct Jump(f32);
 
 fn jump(
-    input: Res<Input<KeyCode>>,
+    input: Res<ButtonInput<KeyCode>>,
     mut commands: Commands,
     query: Query<
         (Entity, &KinematicCharacterControllerOutput),
@@ -128,7 +128,7 @@ fn jump(
 
     let (player, output) = query.single();
 
-    if input.pressed(KeyCode::Up) && output.grounded {
+    if input.pressed(KeyCode::ArrowUp) && output.grounded {
         commands.entity(player).insert(Jump(0.0));
     }
 }
@@ -194,7 +194,7 @@ fn apply_idle_sprite(
     mut query: Query<(
         Entity,
         &KinematicCharacterControllerOutput,
-        &mut TextureAtlasSprite,
+        &mut TextureAtlas,
     )>,
 ) {
     if query.is_empty() {
@@ -213,7 +213,7 @@ fn apply_jump_sprite(
     mut query: Query<(
         Entity,
         &KinematicCharacterControllerOutput,
-        &mut TextureAtlasSprite,
+        &mut TextureAtlas,
     )>,
 ) {
     if query.is_empty() {
@@ -244,7 +244,7 @@ fn update_direction(
     }
 }
 
-fn update_sprite_direction(mut query: Query<(&mut TextureAtlasSprite, &Direction)>) {
+fn update_sprite_direction(mut query: Query<(&mut TextureAtlas, &Direction)>) {
     if query.is_empty() {
         return;
     }
