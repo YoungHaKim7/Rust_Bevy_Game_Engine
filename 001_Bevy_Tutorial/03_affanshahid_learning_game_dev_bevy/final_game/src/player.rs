@@ -65,8 +65,8 @@ fn setup(
     let atlas_handle = atlases.add(texture_atlas);
 
     commands
-        .spawn(SpriteSheetBundle {
-            sprite: TextureAtlasSprite::new(SPRITE_IDX_STAND),
+        .spawn(TextureAtlas {
+            sprite: TextureAtlas::new(SPRITE_IDX_STAND),
             texture_atlas: atlas_handle,
             transform: Transform {
                 translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 300.0, 0.0),
