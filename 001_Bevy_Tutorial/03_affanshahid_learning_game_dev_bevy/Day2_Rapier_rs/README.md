@@ -10,3 +10,5 @@
 - https://github.com/bevyengine/bevy/blob/latest/examples/2d/sprite_animation.rs
 
 - https://github.com/bevyengine/bevy/blob/latest/examples/2d/texture_atlas.rs
+
+- https://docs.rs/bevy/latest/bevy/prelude/struct.Transform.html
