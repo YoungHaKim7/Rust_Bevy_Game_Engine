@@ -1,5 +1,6 @@
 use bevy::{
-    ecs::bundle::Bundle,
+    app::{App, Plugin, Startup},
+    ecs::{bundle::Bundle, system::Commands},
     math::Vec3,
     sprite::{Sprite, SpriteBundle},
     transform::components::Transform,
@@ -36,4 +37,18 @@ impl PlatformBundle {
             collider: Collider::cuboid(0.5, 0.5),
         }
     }
+}
+
+pub struct PlatformsPlugin;
+
+impl Plugin for PlatformsPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_systems(Startup, setup);
+    }
+}
+
+fn setup(mut commands: Commands) {
+    commands.spawn(PlatformBundle::new(-100.0, Vec3::new(75.0, 200.0, 1.0)));
+    commands.spawn(PlatformBundle::new(100.0, Vec3::new(50.0, 350.0, 1.0)));
+    commands.spawn(PlatformBundle::new(350.0, Vec3::new(150.0, 250.0, 1.0)));
 }

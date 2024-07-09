@@ -1,10 +1,15 @@
+use std::time::Duration;
+
 use bevy::{
+    app::{App, Plugin, Startup, Update},
     asset::Assets,
     color::Color,
     ecs::system::{Commands, Query, Res, ResMut},
     input::{keyboard::KeyCode, ButtonInput},
     math::{primitives::Circle, Vec2, Vec3},
-    prelude::{default, Camera2dBundle, ColorMaterial, Component, Entity, With, Without},
+    prelude::{
+        default, Camera2dBundle, ColorMaterial, Component, Entity, TextureAtlas, With, Without,
+    },
     render::mesh::Mesh,
     sprite::{MaterialMesh2dBundle, Sprite, SpriteBundle},
     time::Time,
@@ -13,13 +18,11 @@ use bevy::{
 
 use bevy_rapier2d::{
     control::{KinematicCharacterController, KinematicCharacterControllerOutput},
-    parry::shape,
     prelude::{Collider, RigidBody},
 };
 
-use crate::platforms::PlatformBundle;
-use crate::WINDOW_HEIGHT;
 use crate::WINDOW_WIDTH;
+use crate::{animation::Animation, WINDOW_HEIGHT};
 
 const WINDOW_BOTTOM_Y: f32 = WINDOW_HEIGHT / -2.0;
 const WINDOW_LEFT_X: f32 = WINDOW_WIDTH / -2.0;
@@ -29,6 +32,21 @@ const PLAYER_VELOCITY_Y: f32 = 850.0;
 const MAX_JUMP_HEIGHT: f32 = 230.0;
 const FLOOR_THICKNESS: f32 = 10.0;
 
+const SPRITESHEET_COLS: usize = 7;
+const SPRITESHEET_ROWS: usize = 8;
+
+const SPRITE_TILE_WIDTH: f32 = 128.0;
+const SPRITE_TILE_HEIGHT: f32 = 256.0;
+
+const SPRITE_RENDER_WIDTH: f32 = 64.0;
+const SPRITE_RENDER_HEIGHT: f32 = 128.0;
+
+const SPRITE_IDX_STAND: usize = 28;
+const SPRITE_IDX_WALKING: &[usize] = &[7, 0];
+const SPRITE_IDX_JUMP: usize = 35;
+
+const CYCLE_DELAY: Duration = Duration::from_millis(70);
+
 const COLOR_FLOOR: Color = Color::srgba(0.66275, 0.66275, 0.66275, 1.0);
 
 const COLOR_PLAYER: Color = ORANGE_RED;
@@ -36,6 +54,49 @@ const COLOR_PLAYER: Color = ORANGE_RED;
 const LIME_GREEN_COLOR: Color = Color::srgba(0.19608, 0.80392, 0.01961, 1.0);
 const AQUA_COLOR: Color = Color::hsl(180.0, 1.00, 0.5);
 const ORANGE_RED: Color = Color::srgba(1.0, 0.26667, 0.20000, 1.0);
+
+pub struct PlayerPlugin;
+
+impl Plugin for PlayerPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_systems(Startup, setup)
+            .add_systems(Update, movement)
+            .add_systems(Update, jump)
+            .add_systems(Update, rise)
+            .add_systems(Update, fall)
+            .add_systems(Update, apply_movement_animation)
+            .add_systems(Update, apply_idle_sprite)
+            .add_systems(Update, apply_jump_sprite)
+            .add_systems(Update, update_direction)
+            .add_systems(Update, update_sprite_direction);
+    }
+}
+
+#[derive(Component)]
+enum Direction {
+    Right,
+    Left,
+}
+
+fn setup(mut commands: Commands) {
+    commands.spawn(Camera2dBundle::default());
+
+    commands
+        .spawn(SpriteBundle {
+            sprite: Sprite {
+                color: COLOR_FLOOR,
+                ..Default::default()
+            },
+            transform: Transform {
+                translation: Vec3::new(0.0, WINDOW_BOTTOM_Y + (FLOOR_THICKNESS / 2.0), 0.0),
+                scale: Vec3::new(WINDOW_WIDTH, FLOOR_THICKNESS, 1.0),
+                ..Default::default()
+            },
+            ..Default::default()
+        })
+        .insert(RigidBody::Fixed)
+        .insert(Collider::cuboid(0.5, 0.5));
+}
 
 pub fn movement(
     input: Res<ButtonInput<KeyCode>>,
@@ -122,146 +183,86 @@ fn fall(time: Res<Time>, mut query: Query<&mut KinematicCharacterController, Wit
     }
 }
 
-pub fn setup(
+fn apply_movement_animation(
     mut commands: Commands,
-    mut meshes: ResMut<Assets<Mesh>>,
-    mut materials: ResMut<Assets<ColorMaterial>>,
+    query: Query<(Entity, &KinematicCharacterControllerOutput), Without<Animation>>,
 ) {
-    // commands.spawn(PlatformBundle::new(-100.0, Vec3::new(75.0, 200.0, 1.0)));
-    // commands.spawn(PlatformBundle::new(100.0, Vec3::new(50.0, 350.0, 1.0)));
-    // commands.spawn(PlatformBundle::new(350.0, Vec3::new(150.0, 250.0, 1.0)));
+    if query.is_empty() {
+        return;
+    }
 
-    commands
-        .spawn(MaterialMesh2dBundle {
-            mesh: meshes.add(Circle::default()).into(),
-            material: materials.add(ColorMaterial::from(COLOR_PLAYER)),
-            transform: Transform {
-                translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 30.0, 0.0),
-                scale: Vec3::new(30.0, 30.0, 1.0),
-                ..Default::default()
-            },
-            ..default()
-        })
-        .insert(RigidBody::KinematicPositionBased)
-        .insert(Collider::ball(0.5))
-        .insert(KinematicCharacterController::default());
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: LIME_GREEN_COLOR,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(-100.0, 0.0, 0.0),
-                scale: Vec3::new(75.0, 200.0, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Dynamic)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: AQUA_COLOR,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(100.0, 0.0, 0.0),
-                scale: Vec3::new(50.0, 350.0, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Dynamic)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: ORANGE_RED,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(350.0, 0.0, 0.0),
-                scale: Vec3::new(150.0, 250.0, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Dynamic)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands
-        .spawn(SpriteBundle {
-            sprite: Sprite {
-                color: COLOR_FLOOR,
-                ..Default::default()
-            },
-            transform: Transform {
-                translation: Vec3::new(0.0, WINDOW_BOTTOM_Y + (FLOOR_THICKNESS / 2.0), 0.0),
-                scale: Vec3::new(WINDOW_WIDTH, FLOOR_THICKNESS, 1.0),
-                ..Default::default()
-            },
-            ..Default::default()
-        })
-        .insert(RigidBody::Fixed)
-        .insert(Collider::cuboid(0.5, 0.5));
-
-    commands.spawn(MaterialMesh2dBundle {
-        mesh: meshes.add(Circle::default()).into(),
-        material: materials.add(ColorMaterial::from(COLOR_PLAYER)),
-        transform: Transform {
-            translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 30.0, 0.0),
-            scale: Vec3::new(30.0, 30.0, 1.0),
-            ..Default::default()
-        },
-        ..default()
-    });
-    commands.spawn(Camera2dBundle::default());
+    let (player, output) = query.single();
+    if output.desired_translation.x != 0.0 && output.grounded {
+        commands
+            .entity(player)
+            .insert(Animation::new(SPRITE_IDX_WALKING, CYCLE_DELAY));
+    }
 }
 
-// pub fn setup(
-//     mut commands: Commands,
-//     mut meshes: ResMut<Assets<Mesh>>,
-//     mut materials: ResMut<Assets<ColorMaterial>>,
-// ) {
-//     commands.spawn(PlatformBundle::new(-100.0, Vec3::new(75.0, 200.0, 1.0)));
-//     commands.spawn(PlatformBundle::new(100.0, Vec3::new(50.0, 350.0, 1.0)));
-//     commands.spawn(PlatformBundle::new(350.0, Vec3::new(150.0, 250.0, 1.0)));
+fn apply_idle_sprite(
+    mut commands: Commands,
+    mut query: Query<(
+        Entity,
+        &KinematicCharacterControllerOutput,
+        &mut TextureAtlas,
+    )>,
+) {
+    if query.is_empty() {
+        return;
+    }
 
-//     commands.spawn(Camera2dBundle::default());
+    let (player, output, mut sprite) = query.single_mut();
+    if output.desired_translation.x == 0.0 && output.grounded {
+        commands.entity(player).remove::<Animation>();
+        sprite.index = SPRITE_IDX_STAND
+    }
+}
 
-//     commands
-//         .spawn(MaterialMesh2dBundle {
-//             // mesh: meshes.add(shape::Circle::default()).into(),
-//             mesh: meshes.add(Circle::default()).into(),
-//             material: materials.add(ColorMaterial::from(COLOR_PLAYER)),
-//             transform: Transform {
-//                 translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 30.0, 0.0),
-//                 scale: Vec3::new(30.0, 30.0, 1.0),
-//                 ..Default::default()
-//             },
-//             ..default()
-//         })
-//         .insert(RigidBody::KinematicPositionBased)
-//         .insert(Collider::ball(0.5))
-//         .insert(KinematicCharacterController::default());
+fn apply_jump_sprite(
+    mut commands: Commands,
+    mut query: Query<(
+        Entity,
+        &KinematicCharacterControllerOutput,
+        &mut TextureAtlas,
+    )>,
+) {
+    if query.is_empty() {
+        return;
+    }
 
-//     commands
-//         .spawn(SpriteBundle {
-//             sprite: Sprite {
-//                 color: COLOR_FLOOR,
-//                 ..Default::default()
-//             },
-//             transform: Transform {
-//                 translation: Vec3::new(0.0, WINDOW_BOTTOM_Y + (FLOOR_THICKNESS / 2.0), 0.0),
-//                 scale: Vec3::new(WINDOW_WIDTH, FLOOR_THICKNESS, 1.0),
-//                 ..Default::default()
-//             },
-//             ..Default::default()
-//         })
-//         .insert(RigidBody::Fixed)
-//         .insert(Collider::cuboid(0.5, 0.5));
-// }
+    let (player, output, mut sprite) = query.single_mut();
+    if !output.grounded {
+        commands.entity(player).remove::<Animation>();
+        sprite.index = SPRITE_IDX_JUMP
+    }
+}
+
+fn update_direction(
+    mut commands: Commands,
+    query: Query<(Entity, &KinematicCharacterControllerOutput)>,
+) {
+    if query.is_empty() {
+        return;
+    }
+
+    let (player, output) = query.single();
+
+    if output.desired_translation.x > 0.0 {
+        commands.entity(player).insert(Direction::Right);
+    } else if output.desired_translation.x < 0.0 {
+        commands.entity(player).insert(Direction::Left);
+    }
+}
+
+fn update_sprite_direction(mut query: Query<(&mut TextureAtlas, &Direction)>) {
+    if query.is_empty() {
+        return;
+    }
+
+    let (mut sprite, direction) = query.single_mut();
+
+    match direction {
+        Direction::Right => sprite.flip_x = false,
+        Direction::Left => sprite.flip_x = true,
+    }
+}
