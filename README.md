@@ -54,10 +54,17 @@ https://arewegameyet.rs/
 
 # sRGB Convert[[🔝]](#link)
 - https://www.easyrgb.com/en/convert.php#inputFORM
-  - sRGB계산법
-    - Eng. Ver.
-      - https://learn.microsoft.com/en-us/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
-    - https://learn.microsoft.com/ko-kr/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
+
+  - https://convertingcolors.com/cmyk-color-0.13_0.13_0.00_0.31.html
+    - `CMYK(0.13, 0.13,0.00,0.31)`
+  ```rs
+  const COLOR_BACKGROUND: Color = Color::rgb(0.13, 0.13, 0.23);
+  ```
+
+- sRGB계산법
+  - Eng. Ver.
+    - https://learn.microsoft.com/en-us/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
+  - https://learn.microsoft.com/ko-kr/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-data-conversion
 
 - RGB 누가 만든거 대단
   - https://rockyshore73.tistory.com/2    
