@@ -103,7 +103,7 @@ fn setup(
     let atlas_handle = atlases.add(texture_atlas);
 
     commands
-        .spawn_bundle(TextureAtlas {
+        .spawn(SpriteBundle {
             texture_atlas: atlas_handle.clone(),
             transform: Transform {
                 translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 300.0, 0.0),
