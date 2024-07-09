@@ -48,6 +48,46 @@ enum Direction {
     Left,
 }
 
+// fn setup(
+//     mut commands: Commands,
+//     mut atlases: ResMut<Assets<TextureAtlas>>,
+//     server: Res<AssetServer>,
+// ) {
+//     let image_handle: Handle<Image> = server.load("spritesheets/spritesheet_players.png");
+//     let texture_atlas = TextureAtlas::from_grid(
+//         image_handle,
+//         Vec2::new(SPRITE_TILE_WIDTH, SPRITE_TILE_HEIGHT),
+//         SPRITESHEET_COLS,
+//         SPRITESHEET_ROWS,
+//         None,
+//         None,
+//     );
+//     let atlas_handle = atlases.add(texture_atlas);
+
+//     commands
+//         .spawn(TextureAtlas {
+//             sprite: TextureAtlas::new(SPRITE_IDX_STAND),
+//             texture_atlas: atlas_handle,
+//             transform: Transform {
+//                 translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 300.0, 0.0),
+//                 scale: Vec3::new(
+//                     SPRITE_RENDER_WIDTH / SPRITE_TILE_WIDTH,
+//                     SPRITE_RENDER_HEIGHT / SPRITE_TILE_HEIGHT,
+//                     1.0,
+//                 ),
+//                 ..Default::default()
+//             },
+//             ..Default::default()
+//         })
+//         .insert(RigidBody::KinematicPositionBased)
+//         .insert(Collider::cuboid(
+//             SPRITE_TILE_WIDTH / 2.0,
+//             SPRITE_TILE_HEIGHT / 2.0,
+//         ))
+//         .insert(KinematicCharacterController::default())
+//         .insert(Direction::Right);
+// }
+
 fn setup(
     mut commands: Commands,
     mut atlases: ResMut<Assets<TextureAtlas>>,
@@ -55,35 +95,27 @@ fn setup(
 ) {
     let image_handle: Handle<Image> = server.load("spritesheets/spritesheet_players.png");
     let texture_atlas = TextureAtlas::from_grid(
-        image_handle,
+        image_handle.clone(),
         Vec2::new(SPRITE_TILE_WIDTH, SPRITE_TILE_HEIGHT),
         SPRITESHEET_COLS,
         SPRITESHEET_ROWS,
-        None,
-        None,
     );
     let atlas_handle = atlases.add(texture_atlas);
 
     commands
-        .spawn(TextureAtlas {
-            sprite: TextureAtlas::new(SPRITE_IDX_STAND),
-            texture_atlas: atlas_handle,
+        .spawn_bundle(TextureAtlas {
+            texture_atlas: atlas_handle.clone(),
             transform: Transform {
                 translation: Vec3::new(WINDOW_LEFT_X + 100.0, WINDOW_BOTTOM_Y + 300.0, 0.0),
-                scale: Vec3::new(
-                    SPRITE_RENDER_WIDTH / SPRITE_TILE_WIDTH,
-                    SPRITE_RENDER_HEIGHT / SPRITE_TILE_HEIGHT,
-                    1.0,
-                ),
+                scale: Vec3::splat(SPRITE_RENDER_WIDTH / SPRITE_TILE_WIDTH),
                 ..Default::default()
             },
             ..Default::default()
         })
         .insert(RigidBody::KinematicPositionBased)
-        .insert(Collider::cuboid(
-            SPRITE_TILE_WIDTH / 2.0,
-            SPRITE_TILE_HEIGHT / 2.0,
-        ))
+        .insert(Collider::Cuboid {
+            half_extents: Vec2::new(SPRITE_TILE_WIDTH / 2.0, SPRITE_TILE_HEIGHT / 2.0),
+        })
         .insert(KinematicCharacterController::default())
         .insert(Direction::Right);
 }
