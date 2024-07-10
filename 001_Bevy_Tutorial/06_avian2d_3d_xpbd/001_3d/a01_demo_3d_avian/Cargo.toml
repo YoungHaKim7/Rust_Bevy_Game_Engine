@@ -1,0 +1,8 @@
+[package]
+name = "a01_demo_3d_avian"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.14.0"
+avian3d = { git = "https://github.com/Jondolf/avian", branch = "main" }
