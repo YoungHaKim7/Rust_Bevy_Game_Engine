@@ -3,7 +3,10 @@
   - https://github.com/Jondolf/bevy_xpbd
     - https://github.com/Jondolf/bevy_xpbd/issues/346
       - XPBD가 NVIDIA저작권 문제로 대규모 업데이트 예정인 프로젝트 역시 저작권이 걸리네 ㅠㅠ
-        - https://docs.rs/avian2d/latest/avian2d/
+
+# avian2d
+  - https://docs.rs/avian2d/latest/avian2d/
+    - https://github.com/Jondolf/avian
 
 <hr>
 
