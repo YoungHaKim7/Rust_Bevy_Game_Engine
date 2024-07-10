@@ -5,8 +5,14 @@
       - XPBD가 NVIDIA저작권 문제로 대규모 업데이트 예정인 프로젝트 역시 저작권이 걸리네 ㅠㅠ
 
 # avian2d
-  - https://docs.rs/avian2d/latest/avian2d/
-    - https://github.com/Jondolf/avian
+- https://docs.rs/avian2d/latest/avian2d/
+  - https://github.com/Jondolf/avian
+
+- 2D Examples
+  - https://github.com/Jondolf/avian/tree/main/crates/avian2d/examples
+
+- 3D Examples
+  - https://github.com/Jondolf/avian/tree/main/crates/avian3d/examples
 
 <hr>
 
