@@ -13,7 +13,7 @@ use bevy::{
         primitives::{Cuboid, Cylinder},
         Vec3,
     },
-    pbr::{PbrBundle, StandardMaterial},
+    pbr::{PbrBundle, PointLight, PointLightBundle, StandardMaterial},
     prelude::default,
     render::mesh::Mesh,
     transform::components::Transform,
@@ -25,11 +25,13 @@ fn setup(
     mut meshes: ResMut<Assets<Mesh>>,
     mut materials: ResMut<Assets<StandardMaterial>>,
 ) {
+    // 3d Camera
     commands.spawn(Camera3dBundle {
         transform: Transform::from_xyz(0.0, 0.0, 10.0).looking_at(Vec3::ZERO, Vec3::Y),
         ..default()
     });
 
+    // Static physics object with a collision shape
     commands.spawn((
         RigidBody::Static,
         Collider::cylinder(2.5, 0.5),
@@ -40,6 +42,7 @@ fn setup(
         },
     ));
 
+    // Dynamic physics object with a collision shape and initial angular velocity
     commands.spawn((
         RigidBody::Dynamic,
         Collider::cuboid(1.0, 1.0, 1.0),
@@ -51,6 +54,16 @@ fn setup(
             ..default()
         },
     ));
+
+    // Light
+    commands.spawn(PointLightBundle {
+        point_light: PointLight {
+            shadows_enabled: true,
+            ..default()
+        },
+        transform: Transform::from_xyz(4.0, 8.0, 4.0),
+        ..default()
+    });
 }
 fn main() {
     App::new()
