@@ -1,7 +1,6 @@
 use avian3d::{
     collision::Collider,
     dynamics::rigid_body::{AngularVelocity, RigidBody},
-    parry::shape::Cylinder,
     PhysicsPlugins,
 };
 use bevy::{
@@ -11,7 +10,7 @@ use bevy::{
     core_pipeline::core_3d::Camera3dBundle,
     ecs::system::{Commands, ResMut},
     math::{
-        primitives::{Cuboid, Rectangle},
+        primitives::{Cuboid, Cylinder},
         Vec3,
     },
     pbr::{PbrBundle, StandardMaterial},
