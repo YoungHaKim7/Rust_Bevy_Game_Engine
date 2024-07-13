@@ -85,10 +85,10 @@ its velocity and the size of the timestep.</p>
 <p>This generally works well for large or slowly moving objects, but fast and small
 objects can pass through thin geometry such as walls and triangle meshes.
 This phenomenon is often called <strong>tunneling</strong>.</p>
-<svg width="300" height="350" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="141" y="1" width="18" height="298" fill="#64C850" stroke="black" stroke-width="2"/>
-    <circle cx="275" cy="150" r="24" stroke="#5064C8" stroke-width="2" stroke-dasharray="4 4"/>
-    <circle cx="25" cy="150" r="24" fill="#5064C8" stroke="black" stroke-width="2"/>
-    <path d="M275.707 150.707C276.098 150.317 276.098 149.683 275.707 149.293L269.343 142.929C268.953 142.538 268.319 142.538 267.929 142.929C267.538 143.319 267.538 143.953 267.929 144.343L273.586 150L267.929 155.657C267.538 156.047 267.538 156.681 267.929 157.071C268.319 157.462 268.953 157.462 269.343 157.071L275.707 150.707ZM25 151L275 151L275 149L25 149L25 151Z" fill="#E19664"/>
-    <text x="150" y="325" style="fill: #b4b4b4; font: 18px monospace; text-anchor: middle;">Discrete</text>
-</svg>
+
+![Screenshot from 2024-07-13 15-40-07](https://github.com/user-attachments/assets/9b4d0e16-a068-47be-85db-7e6ea9acf0cf)
+Discrete
+![Screenshot from 2024-07-13 15-40-14](https://github.com/user-attachments/assets/09a091b1-c45f-4b01-a973-51bf0b4e8863)
+![Screenshot from 2024-07-13 15-40-24](https://github.com/user-attachments/assets/fdef78dc-09ad-43c2-a231-7f8167484e1e)
+![Screenshot from 2024-07-13 15-40-32](https://github.com/user-attachments/assets/87bb7bed-1b8d-4e2c-97da-365c1bb2c945)
+
