@@ -32,7 +32,7 @@
 
 <hr>
 
-- [#qt-tutorials](#qt-tutorials)
+- [qt-tutorials](#qt-tutorialsc)
 
 <hr>
 
