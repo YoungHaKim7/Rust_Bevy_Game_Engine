@@ -1,0 +1,27 @@
+[package]
+name = "examples_common_2d"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+use-debug-plugin = []
+
+[dependencies]
+bevy = { version = "0.14", default-features = false, features = [
+    "bevy_core_pipeline",
+    "bevy_state",
+    "bevy_text",
+    "bevy_ui",
+    "bevy_asset",
+    "bevy_render",
+    "bevy_sprite",
+    "bevy_pbr",
+    "bevy_gizmos",
+    "default_font",
+    "tonemapping_luts",
+    "ktx2",
+    "zstd",
+    "bevy_winit",
+    "x11",                # github actions runners don't have libxkbcommon installed, so can't use wayland
+] }
+avian2d = { path = "../avian2d", default-features = false }

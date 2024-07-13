@@ -1,0 +1,36 @@
+[package]
+name = "a03_cubes"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["examples_common_3d"]
+resolver = "2"
+
+[features]
+use-debug-plugin = []
+
+[dependencies]
+bevy = { version = "0.14", default-features = false, features = [
+    "bevy_core_pipeline",
+    "bevy_state",
+    "bevy_text",
+    "bevy_ui",
+    "bevy_asset",
+    "bevy_render",
+    "bevy_sprite",
+    "bevy_pbr",
+    "bevy_gizmos",
+    "bevy_gltf",
+    "default_font",
+    "tonemapping_luts",
+    "ktx2",
+    "png",
+    "zstd",
+    "bevy_winit",
+    "x11",                # github actions runners don't have libxkbcommon installed, so can't use wayland
+] }
+avian3d = { git = "https://github.com/Jondolf/avian", default-features = false, branch = "main" }
+
+[profile.dev]
+opt-level = 1
