@@ -31,6 +31,11 @@ opt-level = 1
 opt-level = 3
 ```
 
+```
+cargo add avian3d
+```
+- https://crates.io/crates/avian3d
+
 # 기본틀(2d물리엔진)
 
 - Cargo.toml
@@ -54,6 +59,11 @@ opt-level = 1
 opt-level = 3
 ```
 - https://github.com/Jondolf/avian
+
+```
+cargo add avian2d
+```
+- https://crates.io/crates/avian2d
 
 <hr>
 
