@@ -293,4 +293,9 @@ https://youtu.be/GwlZ5EPu8l0?si=cPHJUupEsMuYDDfU
   - C++ 예재
     - https://doc.qt.io/qt-6/qt3d-simple-cpp-example.html
 
+# gnutplot(linuxOS 설치)
+```
+sudo apt install -y gnuplot
+```
+
 <hr>
