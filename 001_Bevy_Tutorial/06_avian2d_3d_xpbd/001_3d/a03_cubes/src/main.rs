@@ -3,7 +3,7 @@
 use avian3d::{math::*, prelude::*};
 use bevy::prelude::*;
 
-use crate::examples_common_3d::ExampleCommonPlugin;
+use examples_common_3d::ExampleCommonPlugin;
 
 fn main() {
     App::new()
