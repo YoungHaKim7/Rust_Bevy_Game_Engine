@@ -34,7 +34,6 @@ avian3d = { path = "crates/avian3d"}
 examples_common_3d = {path ="crates/examples_common_3d"}
 avian_derive = {path = "crates/avian_derive"}
 
-bevy_math = { version = "0.14" }
 libm = { version = "0.2", optional = true }
 parry3d = { version = "0.15", optional = true }
 parry3d-f64 = { version = "0.15", optional = true }
