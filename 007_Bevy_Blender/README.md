@@ -13,3 +13,10 @@
   - https://youtu.be/p8d8TKo59LU?si=pbbyj9sUOmSmWgNu
 
 <br>
+
+<hr>
+
+# 다른 사람이 만든 Blender 파일(연습하기 좋다.)
+- https://github.com/RayMarch/ferris3d
+
+<hr>
