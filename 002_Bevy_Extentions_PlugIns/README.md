@@ -23,3 +23,7 @@
 
 # 그 외에 물리엔진 많다
 - https://arewegameyet.rs/ecosystem/physics/
+
+# Bevy Vector Shapes
+- A library for rendering vector shapes using the Bevy game engine
+  - https://github.com/james-j-obrien/bevy_vector_shapes
