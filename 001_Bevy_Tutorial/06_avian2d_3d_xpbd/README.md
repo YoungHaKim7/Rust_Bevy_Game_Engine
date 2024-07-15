@@ -17,7 +17,7 @@ The next evolution of ECS-driven physics for Bevy
 <hr>
 
 # Study
-- https://docs.rs/avian3d/0.1.0/avian3d/
+- https://docs.rs/avian3d/0.1.1/avian3d/index.html
 - https://docs.rs/avian2d/0.1.1/avian2d/index.html
 
 <hr>
