@@ -16,6 +16,11 @@ The next evolution of ECS-driven physics for Bevy
 
 <hr>
 
+# Study
+- https://docs.rs/avian2d/0.1.1/avian2d/index.html
+
+<hr>
+
 # 기본틀(3d 물리엔진)
 
 - Cargo.toml
