@@ -1,0 +1,56 @@
+[package]
+name = "a05_chain_3d"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[dependencies]
+bevy = { version = "0.14", default-features = false, features = [
+    "bevy_core_pipeline",
+    "bevy_state",
+    "bevy_text",
+    "bevy_ui",
+    "bevy_asset",
+    "bevy_render",
+    "bevy_sprite",
+    "bevy_pbr",
+    "bevy_gizmos",
+    "bevy_gltf",
+    "default_font",
+    "tonemapping_luts",
+    "ktx2",
+    "png",
+    "zstd",
+    "bevy_winit",
+    "x11",                # github actions runners don't have libxkbcommon installed, so can't use wayland
+] }
+avian3d = { git = "https://github.com/Jondolf/avian"}
+examples_common_3d = {path = "crates/examples_common_3d"}
+
+libm = { version = "0.2", optional = true }
+parry3d = { version = "0.15", optional = true }
+parry3d-f64 = { version = "0.15", optional = true }
+nalgebra = { version = "0.32.6", features = [
+    "convert-glam027",
+], optional = true }
+serde = { version = "1", features = ["derive"], optional = true }
+derive_more = "0.99"
+indexmap = "2.0.0"
+fxhash = "0.2.1"
+itertools = "0.13"
+bitflags = "2.5.0"
+
+[dev-dependencies]
+bevy_math = { version = "0.14", features = ["approx"] }
+approx = "0.5"
+criterion = { version = "0.5", features = ["html_reports"] }
+insta = "1.0"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
