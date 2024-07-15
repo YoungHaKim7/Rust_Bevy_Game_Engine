@@ -20,7 +20,7 @@
     - https://github.com/Jondolf/bevy_xpbd/issues/346
       - XPBD가 NVIDIA저작권 문제로 대규모 업데이트 예정인 프로젝트 역시 저작권이 걸리네 ㅠㅠ
 
-# avian2d
+# avian2D & 3D[[🔝]](#link)
 - https://docs.rs/avian2d/latest/avian2d/
   - https://github.com/Jondolf/avian
 
@@ -32,14 +32,14 @@
 
 <hr>
 
-# Rust Bevy 물리엔진은 지금 
+# Rust Bevy 물리엔진은 지금 [[🔝]](#link)
 - https://rapier.rs/
 
 <hr>
 
-# 그 외에 물리엔진 많다
+# 그 외에 물리엔진 많다[[🔝]](#link)
 - https://arewegameyet.rs/ecosystem/physics/
 
-# Bevy Vector Shapes
+# Bevy Vector Shapes[[🔝]](#link)
 - A library for rendering vector shapes using the Bevy game engine
   - https://github.com/james-j-obrien/bevy_vector_shapes
