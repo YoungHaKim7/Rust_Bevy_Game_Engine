@@ -1,0 +1,1 @@
+- https://docs.rs/avian3d/0.1.1/avian3d/dynamics/rigid_body/enum.RigidBody.html#rigid-body-types
