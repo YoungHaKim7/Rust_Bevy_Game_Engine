@@ -7,6 +7,8 @@
 # Deriving 3D Rigid Body Physics and implementing it in C/C++ (with intuitions) | blackedout01
 - https://youtu.be/4r_EvmPKOvY?si=BUS4OK2FpS-J5Lne
 
+# Devlog | blackedout01 모아보기(XPBD설명 C++코드로 해줌.)
+-https://youtube.com/playlist?list=PLwMZtAEBQ8ZywWPf6twbspmYzGg0Fr2DJ&si=jyOANeioFu8m8pVa
 
 <hr>
 
