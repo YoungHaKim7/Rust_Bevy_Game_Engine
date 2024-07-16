@@ -20,3 +20,10 @@
 - https://github.com/RayMarch/ferris3d
 
 <hr>
+
+<hr>
+
+# (유료$)캐릭터 제작을 위한 블렌더 3D 모델링&렌더링 : 한 권으로 끝내는 3D 모델링 교과서 [  PDF  ]
+- https://economiceco.tistory.com/m/19449
+
+<hr>
