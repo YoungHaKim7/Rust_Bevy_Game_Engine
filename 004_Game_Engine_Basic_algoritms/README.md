@@ -4,6 +4,12 @@
 
 <hr>
 
+# Deriving 3D Rigid Body Physics and implementing it in C/C++ (with intuitions) | blackedout01
+- https://youtu.be/4r_EvmPKOvY?si=BUS4OK2FpS-J5Lne
+
+
+<hr>
+
 # quaternion to 4*4 matrix ?
 - https://www.reddit.com/r/rust_gamedev/comments/obk3w9/quaternion_to_44_matrix/
 
