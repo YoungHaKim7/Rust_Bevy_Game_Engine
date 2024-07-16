@@ -195,6 +195,10 @@ pub fn move_piece(
                 block.y -= 1;
                 spawn_drop_audio(&mut commands, &game_audios);
                 reset_manually_move_timer = true;
+            } else if keyboard_input.pressed(KeyCode::Space) && movable.can_down && !already_down {
+                block.y -= 1;
+                spawn_drop_audio(&mut commands, &game_audios);
+                reset_manually_move_timer = true;
             }
         }
         transform.translation = block.translation();

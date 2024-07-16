@@ -14,6 +14,10 @@ mod menu;
 mod piece;
 mod stats;
 
+fn setup_camera(mut commands: Commands) {
+    commands.spawn(Camera2dBundle::default());
+}
+
 fn main() {
     App::new()
         .insert_resource(Score(0))
@@ -125,8 +129,4 @@ fn main() {
             ),
         )
         .run();
-}
-
-fn setup_camera(mut commands: Commands) {
-    commands.spawn(Camera2dBundle::default());
 }
