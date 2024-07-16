@@ -59,6 +59,7 @@ components = ["rustfmt", "rust-src"]
 
 <hr>
 
+
 # Bevy API
 - https://docs.rs/bevy/0.14.0-rc.4/bevy/index.html
 - Migration-guides
@@ -82,6 +83,10 @@ components = ["rustfmt", "rust-src"]
 - https://bevyengine.org/learn/quick-start/getting-started/ecs/
 
 - https://github.com/bevyengine/bevy/tree/latest/examples#examples
+
+
+# Awesome-Bevy
+- https://github.com/Anshorei/awesome-bevy
 
 # 시리즈 모아보기
 
