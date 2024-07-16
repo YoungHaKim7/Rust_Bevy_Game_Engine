@@ -1,0 +1,8 @@
+[package]
+name = "tetris_cn_dev_bevy0_14version"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = { version = "0.14.0", features = ["wav", "bmp"] }
+rand = "0.8.5"
