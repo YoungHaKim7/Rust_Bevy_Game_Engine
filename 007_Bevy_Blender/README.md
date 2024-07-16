@@ -24,6 +24,8 @@
 <hr>
 
 # (유료$)캐릭터 제작을 위한 블렌더 3D 모델링&렌더링 : 한 권으로 끝내는 3D 모델링 교과서 [  PDF  ]
-- https://economiceco.tistory.com/m/19449
+- 3dtotal Publishing 저 / 안동현 역 | 이지스퍼블리싱 (주) | 2023년 09월 15일  
+  - https://m.yes24.com/Goods/Detail/122327038
+    - https://economiceco.tistory.com/m/19449
 
 <hr>
