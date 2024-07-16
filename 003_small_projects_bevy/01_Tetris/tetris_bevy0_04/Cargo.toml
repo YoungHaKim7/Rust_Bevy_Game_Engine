@@ -1,0 +1,8 @@
+[package]
+name = "tetris_bevy0_04"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.4"
+rand = "0.7.3"
