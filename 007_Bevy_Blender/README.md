@@ -22,6 +22,7 @@
 <hr>
 
 # Polygon-mesh폴리곤 이해하기
+- https://en.wikipedia.org/wiki/Polygon_mesh
 - https://github.com/YoungHaKim7/Rust_Bevy_Game_Engine/tree/main/004_Game_Engine_Basic_algoritms#polygon-mesh
 
 <hr>
