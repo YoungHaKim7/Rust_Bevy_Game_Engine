@@ -12,4 +12,7 @@
   - https://itch.io/physical-games/tag-map-making
 
 # 맵 만들기 힌트
+- 구글 맵으로 맵 만들기 Making a Google Maps game| Game Dev World
+  - https://youtu.be/ozBS61--OEo?si=r7wlBEPWOOAu8fPM
+
 https://www.reddit.com/r/gamedev/comments/sjb13k/how_to_make_a_game_map_similar_to_paradox_games/
