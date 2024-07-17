@@ -32,6 +32,10 @@
 
 <hr>
 
+- [Blender_블렌더_최신소식_](https://github.com/YoungHaKim7/Rust_Game_Blender?tab=readme-ov-file#blender%EC%B5%9C%EC%8B%A0-%EC%86%8C%EC%8B%9D)
+
+<hr>
+
 - [qt-tutorials](#qt-tutorialsc)
 
 <hr>
