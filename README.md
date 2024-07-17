@@ -310,13 +310,13 @@ sudo apt install -y gnuplot
 
 <hr>
 
-# 러스트해서 살아남은 case
+# 러스트해서 살아남은 case 👍
 
 # 러스트 게임 개발자(240717기준) 최근까지 살아남은 몇 안되는 Rust Dev.존경스럽다.[[🔝]](#link)
 - Game dev in Rust - some notes on the mess
   - https://users.rust-lang.org/t/game-dev-in-rust-some-notes-on-the-mess/104939
 
-## 러스트하다가 포기한 case
+## 러스트하다가 포기한 case 👎
 
 # 러스트 동시실행에서 무너진 개발자(거의 다 왔는데 바보...)(240426기준글)[[🔝]](#link)
 - **[GN⁺: Rust로 게임 개발을 한 3년 후에 떠나며](<https://news.hada.io/topic?id=14521&utm_source=discord&utm_medium=bot&utm_campaign=1480>)**
