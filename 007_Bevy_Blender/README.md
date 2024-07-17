@@ -1,3 +1,8 @@
+# Blender최신 소식 정리중.
+- https://github.com/YoungHaKim7/Rust_Game_Blender?tab=readme-ov-file#blender%EC%B5%9C%EC%8B%A0-%EC%86%8C%EC%8B%9D
+
+<hr>
+
 # Rust + Blender
 
 - https://github.com/rust-adventure/yt-bevy-blender
