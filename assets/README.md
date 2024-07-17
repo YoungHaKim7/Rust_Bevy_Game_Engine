@@ -20,3 +20,8 @@ https://www.reddit.com/r/gamedev/comments/sjb13k/how_to_make_a_game_map_similar_
 # 블렌더로 맵 만들기
 
 - https://github.com/PacktPublishing/3D-Environment-Design-with-Blender
+
+
+# 유료 책 아마전 원서$
+- 실사에 가까운 모델링 3D Environment Design with Blender: Enhance your modeling, texturing 
+  - https://economiceco.tistory.com/m/19450
