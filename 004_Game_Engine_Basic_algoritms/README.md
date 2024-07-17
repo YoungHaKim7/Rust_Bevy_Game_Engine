@@ -57,5 +57,8 @@
 - https://en.wikipedia.org/wiki/Polygon_mesh
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Mesh_overview.svg/1920px-Mesh_overview.svg.png" />
-<p>Objects created with polygon meshes must store different types of elements. These include vertices, edges, faces, polygons and surfaces. In many applications, only vertices, edges and either faces or polygons are stored. A renderer may support only 3-sided faces, so polygons must be constructed of many of these, as shown above. However, many renderers either support quads and higher-sided polygons, or are able to convert polygons to triangles on the fly, making it unnecessary to store a mesh in a <a href="view-source:https://en.wikipedia.org/wiki/Surface_triangulation" title="Surface triangulation">triangulated</a> form. 
-</p>
+- Objects created with polygon meshes must store different types of elements.
+  - ~~**These include vertices, edges, faces, polygons and surfaces.**~~
+  - In many applications, only vertices, edges and either faces or polygons are stored.
+    - A renderer may support only 3-sided faces, so polygons must be constructed of many of these, as shown above.
+    - However, many renderers either support quads and higher-sided polygons, or are able to convert polygons to triangles on the fly, making it unnecessary to store a mesh in atriangulated form. 
