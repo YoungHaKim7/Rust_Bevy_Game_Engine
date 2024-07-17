@@ -10,3 +10,6 @@
 - https://www.reddit.com/r/Solo_Roleplaying/comments/x1i2lg/map_making_games/
   - https://nookrium.itch.io/mappa-imperium
   - https://itch.io/physical-games/tag-map-making
+
+# 맵 만들기 힌트
+https://www.reddit.com/r/gamedev/comments/sjb13k/how_to_make_a_game_map_similar_to_paradox_games/
