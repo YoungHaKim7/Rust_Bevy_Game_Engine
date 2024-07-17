@@ -21,6 +21,11 @@
 
 <hr>
 
+# Polygon-mesh폴리곤 이해하기
+- https://github.com/YoungHaKim7/Rust_Bevy_Game_Engine/tree/main/004_Game_Engine_Basic_algoritms#polygon-mesh
+
+<hr>
+
 <hr>
 
 # (유료$)캐릭터 제작을 위한 블렌더 3D 모델링&렌더링 : 한 권으로 끝내는 3D 모델링 교과서 [  PDF  ]
