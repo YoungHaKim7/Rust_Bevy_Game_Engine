@@ -318,7 +318,7 @@ sudo apt install -y gnuplot
 
 ## 러스트하다가 포기한 case
 
-# 러스트 동시실행에서 무너진 개발자(거의 다 왔는데 바보...)[[🔝]](#link)
+# 러스트 동시실행에서 무너진 개발자(거의 다 왔는데 바보...)(240426기준글)[[🔝]](#link)
 - **[GN⁺: Rust로 게임 개발을 한 3년 후에 떠나며](<https://news.hada.io/topic?id=14521&utm_source=discord&utm_medium=bot&utm_campaign=1480>)**
 - Rust에 익숙해지면 모든 문제가 사라질 것이라는 주장에 대해  
   - Rust에 익숙해져도 근본적인 문제는 사라지지 않음  
