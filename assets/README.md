@@ -4,6 +4,13 @@
 
 <hr>
 
+# (진짜같다.ㅋㅋㅋ)6 Blender Sky & Atmosphere Addons | InspirationTuts
+- https://youtu.be/0yvGyCQtd-U?si=dkv4VW-KmjBgYF18
+
+
+
+<hr>
+
 # bevyengine/bevy-assets
 - A collection of Bevy assets, plugins, learning resources, and apps made by the community
   - https://github.com/bevyengine/bevy-assets
