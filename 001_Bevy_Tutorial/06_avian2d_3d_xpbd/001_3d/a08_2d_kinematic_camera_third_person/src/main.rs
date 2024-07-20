@@ -21,15 +21,17 @@
 //! or use an existing third party character controller plugin like Bevy Tnua
 //! (a dynamic character controller).
 
-use avian3d::{math::*, prelude::*};
+use avian3d::prelude::*;
 use bevy::prelude::*;
 
 use examples_common_3d::ExampleCommonPlugin;
 
 use camera::CameraPlugin;
+use player::PlayerPlugin;
 use plugin::*;
 
 mod camera;
+mod player;
 mod plugin;
 
 fn main() {
@@ -38,6 +40,7 @@ fn main() {
             DefaultPlugins,
             ExampleCommonPlugin,
             CameraPlugin,
+            PlayerPlugin,
             PhysicsPlugins::default(),
             CharacterControllerPlugin,
         ))
@@ -51,17 +54,17 @@ fn setup(
     mut materials: ResMut<Assets<StandardMaterial>>,
     assets: Res<AssetServer>,
 ) {
-    // Player
-    commands.spawn((
-        PbrBundle {
-            mesh: meshes.add(Capsule3d::new(0.4, 1.0)),
-            material: materials.add(Color::srgb(0.8, 0.7, 0.6)),
-            transform: Transform::from_xyz(0.0, 1.5, 0.0),
-            ..default()
-        },
-        CharacterControllerBundle::new(Collider::capsule(0.4, 1.0), Vector::NEG_Y * 9.81 * 2.0)
-            .with_movement(30.0, 0.92, 7.0, (30.0 as Scalar).to_radians()),
-    ));
+    // // Player
+    // commands.spawn((
+    //     PbrBundle {
+    //         mesh: meshes.add(Capsule3d::new(0.4, 1.0)),
+    //         material: materials.add(Color::srgb(0.8, 0.7, 0.6)),
+    //         transform: Transform::from_xyz(0.0, 1.5, 0.0),
+    //         ..default()
+    //     },
+    //     CharacterControllerBundle::new(Collider::capsule(0.4, 1.0), Vector::NEG_Y * 9.81 * 2.0)
+    //         .with_movement(30.0, 0.92, 7.0, (30.0 as Scalar).to_radians()),
+    // ));
 
     // A cube to move around
     commands.spawn((
