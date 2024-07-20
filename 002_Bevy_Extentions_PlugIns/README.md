@@ -12,6 +12,9 @@
   - [bevy_vector shapes](#bevy-vector-shapes)
 
 
+- Camera
+  - [thrd person camera]() 
+
 <hr>
 
 # 2D and 3D physics engine based on Extended Position Based Dynamics for Bevy.[[🔝]](#link)
@@ -43,3 +46,8 @@
 # Bevy Vector Shapes[[🔝]](#link)
 - A library for rendering vector shapes using the Bevy game engine
   - https://github.com/james-j-obrien/bevy_vector_shapes
+
+<hr>
+
+# Bevy 3d Third Person Tutorial | Part 4 | Third Person Camera | TheDevBlog[[🔝]](#link)
+- https://youtu.be/__8rhqHc82I?si=lpov6hP1S1FSjJyW
