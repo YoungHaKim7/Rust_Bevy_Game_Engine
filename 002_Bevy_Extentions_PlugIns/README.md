@@ -13,7 +13,7 @@
 
 
 - Camera
-  - [thrd person camera]() 
+  - [bevy-3d-third-person-tutorial--part-4--third-person-camera--thedevblog](#bevy-3d-third-person-tutorial--part-4--third-person-camera--thedevblog) 
 
 <hr>
 
