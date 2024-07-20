@@ -1,3 +1,8 @@
+# 여기에 다시 정리중..
+- https://github.com/YoungHaKim7/rust_avian_training
+
+<hr>
+
 # avian2d & 3d NVIDIA저작권때문에 살짝 코드 바꿔서 나옴.(xpbd)
 
 - https://docs.rs/avian2d/latest/avian2d/
