@@ -51,3 +51,7 @@
 
 # Bevy 3d Third Person Tutorial | Part 4 | Third Person Camera | TheDevBlog[[🔝]](#link)
 - https://youtu.be/__8rhqHc82I?si=lpov6hP1S1FSjJyW
+
+# 멀티 플레이 github
+- BrianWiz/bevy_fps
+  - https://github.com/BrianWiz/bevy_fps
