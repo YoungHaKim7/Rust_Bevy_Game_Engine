@@ -30,6 +30,10 @@
 
 https://www.reddit.com/r/gamedev/comments/sjb13k/how_to_make_a_game_map_similar_to_paradox_games/
 
+- Blender, QGIS & Digital Elevation Maps | Mark Alloway
+  - https://youtu.be/-ubDqXZtdJE?si=K1vTz-gaqaGHFmcD
+
+
 # 블렌더로 맵 만들기
 
 - https://github.com/PacktPublishing/3D-Environment-Design-with-Blender
