@@ -55,3 +55,33 @@
 # 멀티 플레이 github
 - BrianWiz/bevy_fps
   - https://github.com/BrianWiz/bevy_fps
+
+- Hi there I'm looking for some reviewers, particularly people who are interested and knowledgeable with multiplayer design:
+
+This is a very early implementation and there's much more to come, I'm just laying the groundwork. It currently features:
+- Networking using Quinnet
+- Move and slide character physics with Avian3d, just a basic sphere that can fly for now
+- Diffing, only send the values that change between the client's last acked snapshot and the current snapshot
+- Extrapolation on *your own* character for players with FPS above the tickrate
+- Predicated server authenticated movement, with smooth correction
+- Client
+- Dedicated Server
+
+What kind of reviewing I'm looking for right now:
+- Opinions on overall project structure, keeping in mind that I will also want to support Listen servers as well
+- Opinions on overall code cleanliness
+- Opinions on doing things the bevy way, and any places where I can make some gains
+
+Next goals:
+- Weapons and death!
+- Standard character movement with step-up mechanics
+
+Goal of the project:
+- Mostly to have fun
+- Educate myself, and others on creating multiplayer games
+- To show off a bit with my friends at <#747940465936040017>, share ideas (this is mainly why I didn't go with Replicon or Lightyear, as there may be something I do differently they can learn from. It's also a good thing educationally to understand what these higher-level crates actually do)
+- A feature-complete arena shooter, but with minimal graphics
+- Eventually to make a blog post, anyone helping out in any capacity will be credited
+
+<@263123021336805376> tl;dr this is just a very early edition but I figured I'd tag you since you've shown the most interest. There's no projectiles or any shooting yet.
+https://github.com/BrianWiz/bevy_fps
