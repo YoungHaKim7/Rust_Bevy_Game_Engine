@@ -327,3 +327,6 @@ sudo apt install -y gnuplot
 - ...
 
 <hr>
+
+# 국내 🇰🇷 IT 개발 전반과 게임 개발에 관한 소식과 정보를 공유하는 GpgStudy.com입니다.[[🔝]](#link)
+- https://gpgstudy.com/
