@@ -44,6 +44,10 @@
 
 <hr>
 
+- [#국내--it-개발-전반과-게임-개발에-관한-소식과-정보를-공유하는-gpgstudycom입니다](#국내--it-개발-전반과-게임-개발에-관한-소식과-정보를-공유하는-gpgstudycom입니다)
+
+<hr>
+
 # Are we Game yet?[[🔝]](#link)
 
 https://arewegameyet.rs/
