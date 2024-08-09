@@ -2,7 +2,10 @@
 
 ```toml
 [dependencies]
-bevy = {version = "0.14.0-dev"}
+bevy = "0.14.0"
+
+# dev 버젼 스타일
+# bevy = {version = "0.14.0-dev"}
 
 [profile.dev]
 opt-level = 1
