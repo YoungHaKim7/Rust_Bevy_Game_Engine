@@ -36,6 +36,11 @@ components = ["rustfmt", "rust-src"]
 
 <hr>
 
+# ecs가 요즘 핫한 이유(240809)
+- 데이터 컨테이너랑 시스템을 나눠서 설계하는거임.
+  - https://www.delltechnologies.com/asset/ko-kr/products/storage/industry-market/h14071-ecs-architectural-guide-wp.pdf
+
+
 # sRGB Convert
   - https://www.easyrgb.com/en/convert.php#inputFORM
 
