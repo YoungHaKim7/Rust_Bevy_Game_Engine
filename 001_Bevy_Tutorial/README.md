@@ -1,4 +1,10 @@
-# `Cargo.toml`일반적인 패턴
+# link
+
+- [test](#test)
+
+<hr>
+
+# `Cargo.toml`일반적인 패턴[[🔝]](#link)
 
 ```toml
 [dependencies]
@@ -14,7 +20,7 @@ opt-level = 1
 opt-level = 3
 ```
 
-# 컴파일 빠르게 만들기
+# 컴파일 빠르게 만들기[[🔝]](#link)
 - Faster linking times on nightly on Linux using `rust-lld`
   - https://blog.rust-lang.org/2024/05/17/enabling-rust-lld-on-linux.html
 
@@ -39,12 +45,12 @@ components = ["rustfmt", "rust-src"]
 
 <hr>
 
-# ecs가 요즘 핫한 이유(240809)
+# ecs가 요즘 핫한 이유(240809)[[🔝]](#link)
 - 데이터 컨테이너랑 시스템을 나눠서 설계하는거임.
   - https://www.delltechnologies.com/asset/ko-kr/products/storage/industry-market/h14071-ecs-architectural-guide-wp.pdf
 
 
-# sRGB Convert
+# sRGB Convert[[🔝]](#link)
   - https://www.easyrgb.com/en/convert.php#inputFORM
 
   - https://convertingcolors.com/cmyk-color-0.13_0.13_0.00_0.31.html
@@ -75,15 +81,15 @@ components = ["rustfmt", "rust-src"]
 
 <hr>
 
-# Bevy + Blender
+# Bevy + Blender[[🔝]](#link)
 - https://github.com/rust-adventure/yt-bevy-blender
 
-# Rust By Example
+# Rust By Example[[🔝]](#link)
 - [https://doc.rust-lang.org/rust-by-example/index.html](https://doc.rust-lang.org/rust-by-example/)
 
 <hr>
 
-# Rust_Bevy_getting-started
+# Rust_Bevy_getting-started[[🔝]](#link)
 
 - https://affanshahid.dev/posts/learning-game-dev-bevy-1/
 - https://bevy-cheatbook.github.io/
@@ -93,10 +99,10 @@ components = ["rustfmt", "rust-src"]
 - https://github.com/bevyengine/bevy/tree/latest/examples#examples
 
 
-# Awesome-Bevy
+# Awesome-Bevy[[🔝]](#link)
 - https://github.com/Anshorei/awesome-bevy
 
-# 시리즈 모아보기
+# 시리즈 모아보기[[🔝]](#link)
 
 - Bevy Materials Logic Projects
   - https://youtube.com/playlist?list=PLT_D88-MTFOMNRPAC-62Hz096aIjT4Noy&si=iuS_sLwD1ISOFg3j
@@ -104,7 +110,7 @@ components = ["rustfmt", "rust-src"]
 - This Week in Bevy Engine | chris biscardi
   - https://youtube.com/playlist?list=PLWtPciJ1UMuAyAER9ASVEDRIz0DUspOeZ&si=yOnNpHaOaEhQkbtZ
 
-# Bevy Rendering Demystified | Logic Projects
+# Bevy Rendering Demystified | Logic Projects[[🔝]](#link)
 
 - https://youtu.be/5oKEPZ6LbNE?si=i3CQaR1_RWy2RV6C
 
@@ -114,6 +120,8 @@ components = ["rustfmt", "rust-src"]
 - https://youtu.be/5r90Z7Ec3Pw?si=8MLWedGjtK-x1BFS
 
 <hr>
+
+# Blender, Bevy, 언리얼엔진별 x,y,y좌표가 틀리면 구분해서 외우기[[🔝]](#link)
 
 ![handedness](https://github.com/YoungHaKim7/Cpp_Training/assets/67513038/4a240cb3-5504-4bfa-926c-a6c511814204)
 
