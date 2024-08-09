@@ -1,6 +1,16 @@
 # link
 
-- [test](#test)
+- Bevy(Rust)
+  - [cargo.toml일반적인-패턴)](#cargotoml일반적인-패턴)
+  - [nightly세팅(컴파일 빠르게 만들기)](#컴파일-빠르게-만들기)
+
+- 게임 bevy 기초 지식
+  - [ESC 아키텍쳐(architecture)가-요즘-핫한-이유240809](#ecs가-요즘-핫한-이유240809)
+  - [Blender, Bevy(Rust), 언리얼엔진(C++) 게임엔진별 x, y, z 좌표가 틀리다. 도형API 기초](#blender-bevy-언리얼엔진별-xyy좌표가-틀리면-구분해서-외우기)
+- 러스트 Bevy Game Engine기초
+  - 색깔Color 코딩
+    - [sRBG-convert](#srgb-convert)
+
 
 <hr>
 
