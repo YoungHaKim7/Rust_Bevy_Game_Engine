@@ -3,6 +3,12 @@
 
 <hr>
 
+# 수학관련 Bevy 구현 죽인
+- Lorenz system rendered in Bevy. 
+  - https://github.com/enellis/bevy_lorenz_system
+
+<hr />
+
 
 # 외국 사람이 만든 게임(Bevy Game Engine으로 만든거)
 
