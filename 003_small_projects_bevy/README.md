@@ -4,9 +4,11 @@
 <hr>
 
 # 수학관련 Bevy 구현 죽인
-- Lorenz system rendered in Bevy. 
+- [Lorenz system rendered in Bevy.레딧](https://www.reddit.com/r/bevy/comments/1hdmsrs/lorenz_system_rendered_in_bevy/?rdt=41773)
   - https://github.com/enellis/bevy_lorenz_system
-  - https://www.reddit.com/r/bevy/comments/1hdmsrs/lorenz_system_rendered_in_bevy/?rdt=41773
+
+- [A planet game we're working on.레딧](https://www.reddit.com/r/bevy/comments/1i0lyiw/our_wip_pixelart_procedural_planet_game/?chainedPosts=t3_1hdmsrs)
+  - https://github.com/Arturr-H/planet-game
 
 <hr />
 
