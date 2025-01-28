@@ -3,7 +3,24 @@
 
 use std::fmt;
 
-use bevy::{image::ImageLoaderSettings, math::ops, prelude::*};
+use bevy::{
+    asset::{AssetServer, Assets},
+    color::Color,
+    image::ImageLoaderSettings,
+    input::ButtonInput,
+    math::{ops, Quat, Vec3},
+    pbr::{MeshMaterial3d, ParallaxMappingMethod, PointLight, StandardMaterial},
+    prelude::{
+        App, BuildChildren, Camera3d, ChildBuild, Commands, Component, Cuboid, Entity, FloatExt,
+        KeyCode, Local, Mesh, Mesh3d, Meshable, MouseButton, Plane3d, Query, Res, ResMut, Single,
+        Sphere, Startup, Text, TextUiWriter, Transform, Update, With,
+    },
+    text::TextSpan,
+    time::Time,
+    ui::{Node, PositionType, Val},
+    utils::default,
+    DefaultPlugins,
+};
 
 #[derive(Component)]
 struct Spin {

@@ -8,8 +8,23 @@
 //! | `S`                | Toggle Directional Light Fog Influence |
 
 use bevy::{
-    pbr::{CascadeShadowConfigBuilder, NotShadowCaster},
-    prelude::*,
+    app::{App, Startup, Update},
+    asset::{AssetServer, Assets},
+    color::{Alpha, Color, Srgba},
+    gltf::GltfAssetLabel,
+    input::ButtonInput,
+    math::Vec3,
+    pbr::{
+        CascadeShadowConfigBuilder, DirectionalLight, DistanceFog, FogFalloff, MeshMaterial3d,
+        NotShadowCaster, StandardMaterial,
+    },
+    prelude::{
+        Camera3d, Commands, Cuboid, KeyCode, Mesh, Mesh3d, Res, ResMut, Single, Text, Transform,
+    },
+    scene::SceneRoot,
+    ui::{Node, PositionType, Val},
+    utils::default,
+    DefaultPlugins,
 };
 
 fn setup_camera_fog(mut commands: Commands) {
