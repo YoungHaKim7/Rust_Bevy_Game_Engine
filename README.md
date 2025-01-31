@@ -14,6 +14,12 @@
 - [(통합본)rust_game_dev--globalyoung정리중-모아보기](#rust_game_dev--globalyoung정리중-모아보기)
 
 
+<hr />
+
+- Migration-guides
+  - 0.14 -> 0.15
+    - [https://bevyengine.org/learn/migration-guides/0-14-to-0-15/](https://bevyengine.org/learn/migration-guides/0-14-to-0-15/)
+
 <hr>
 
 - [러스트_베비_게임엔진_Bevy-gameengine-최신-소식This-Week-in-Bevy](#bevy-gameengine-최신-소식thisweekinbevy)
