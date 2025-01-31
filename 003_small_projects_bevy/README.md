@@ -24,6 +24,9 @@
 - Tetris 테트리스
   - https://github.com/8bit-pudding/bevy-tetris
 
+- Snake
+  - https://mbuffett.com/posts/bevy-snake-tutorial/
+
 - A brick breaker game created using Rust and Bevy.
   - https://github.com/kempnymaciej/bevy-brick-breaker 
 
