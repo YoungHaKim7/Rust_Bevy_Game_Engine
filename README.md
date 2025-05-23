@@ -76,6 +76,16 @@ https://arewegameyet.rs/
 
 <hr>
 
+# 현대 게임 엔진들이 사용하는 표준 방식[[🔝]](#link)
+- Unreal Engine : `Texture2DArray` 사용
+- Unity URP : `Texture2DArray` 사용
+- Frostbite : `Texture2DArray` 사용
+
+- 특히 Deferred Rendering을 사용하는 현재 프레임워크에서는 Texture2DArray + 한번에 처리가 훨씬 효율적입니다.
+
+<hr />
+
+
 # Color컬러 코딩이해하기[[🔝]](#link)
 
 # sRGB Convert[[🔝]](#link)
