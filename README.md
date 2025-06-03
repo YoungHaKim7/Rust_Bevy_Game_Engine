@@ -16,6 +16,13 @@
 
 <hr />
 
+- [(250530)(유튜브 설명 외부영상) Start a new Bevy 2d Game with the Bevy CLI | chris biscardi](https://youtu.be/ez4oGeM3X2o?si=mTP1GH1KtvTj17OU)
+  - This template is a great way to get started on a new 2D Bevy game!
+    -  https://github.com/TheBevyFlock/bevy_new_2d
+
+
+<hr />
+
 - [Migration-guides_https://bevyengine.org/learn/migration-guides/introduction/](https://bevyengine.org/learn/migration-guides/introduction/)
   - 0.14 -> 0.15
     - [https://bevyengine.org/learn/migration-guides/0-14-to-0-15/](https://bevyengine.org/learn/migration-guides/0-14-to-0-15/)
