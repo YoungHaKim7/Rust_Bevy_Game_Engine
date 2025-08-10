@@ -24,6 +24,7 @@
 <hr />
 
 - [Migration-guides_https://bevyengine.org/learn/migration-guides/introduction/](https://bevyengine.org/learn/migration-guides/introduction/)
+  - https://bevy.org/learn/migration-guides/0-15-to-0-16/
   - 0.14 -> 0.15
     - [https://bevyengine.org/learn/migration-guides/0-14-to-0-15/](https://bevyengine.org/learn/migration-guides/0-14-to-0-15/)
   - 0.13 -> 0.14
