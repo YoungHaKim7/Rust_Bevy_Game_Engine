@@ -135,6 +135,32 @@ https://arewegameyet.rs/
 
 <hr>
 
+# Bevy 0.16 바뀌거
+
+- I'm unable to fully resolve the compilation errors without more specific
+  - information about the Bevy 0.16.1 API changes.
+- The persistent errors indicate that `SpriteBundle`, `Camera2dBundle`, `TextStyle`, `TextBundle`, and `TextSection` are not found in scope, even with various import attempts. This suggests their module paths or names have changed significantly in Bevy 0.16.1.
+
+- Additionally, the `no field sections` error for `bevy::prelude::Text` remains, implying that the way to modify text content has also changed.
+
+  - To proceed, I would need to know:
+    - * The correct import paths for `SpriteBundle`, `Camera2dBundle`, `Text`, `TextBundle`, `TextSection`, and `TextStyle` in Bevy 0.16.1.
+    - * The new method for updating the content of a `Text` component, as direct access to `text.sections` seems to be deprecated or removed.
+- If you can provide a link to the Bevy 0.16.1 migration guide or relevant documentation, I can use the `web_fetch` tool to get the necessary information.
+
+- - 더 구체적이지 않으면 컴파일 오류를 완전히 해결할 수 없습니다
+  - Bevy 0.16.1 API 변경 사항에 대한 정보.
+- 지속적인 오류는 'SpriteBundle', 'Camera2dBundle', 'TextStyle', 'TextBundle', 'TextSection'이 다양한 가져오기 시도를 했음에도 불구하고 범위를 찾을 수 없음을 나타냅니다. 이는 베비 0.16.1에서 모듈 경로나 이름이 크게 변경되었음을 시사합니다.
+
+- 또한 'bevy::prelude::Text'에 대한 '필드 섹션 없음' 오류가 남아 있어 텍스트 내용을 수정하는 방법도 변경되었음을 시사합니다.
+
+  - 진행하려면 알아야 합니다:
+    - * 베비 0.16.1에서 'SpriteBundle', 'Camera2dBundle', 'Text', 'TextBundle', 'TextSection', 'TextStyle'의 올바른 가져오기 경로입니다.
+    - * 'text.sections'에 직접 접근할 수 있는 'Text' 구성 요소의 내용을 업데이트하는 새로운 방법이 사용되지 않거나 삭제된 것으로 보입니다.
+- Bevy 0.16.1 마이그레이션 가이드 또는 관련 문서에 대한 링크를 제공해 주실 수 있다면, 필요한 정보를 얻기 위해 'web_fetch' 도구를 사용할 수 있습니다.
+
+<hr />
+
 # Bevy 0.14 Color 코딩 패턴(snippets)[[🔝]](#link)
 
 - 변환은 여기서 해서 색깔을 찾으면 된다. 굿
