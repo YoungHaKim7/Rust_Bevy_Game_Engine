@@ -14,7 +14,9 @@
 - [(통합본)rust_game_dev--globalyoung정리중-모아보기](#rust_game_dev--globalyoung정리중-모아보기)
 
 - 용어 정리
-  - [ECS(Entity Component System) 용어 이해]( 
+  - [ECS(Entity Component System) 용어 이해](#ecsentity-component-system-용어-이해)
+  - [Color 코딩 이해하기_sRGB Convert & 등등](#color컬러-코딩이해하기) 
+
 
 <hr />
 
