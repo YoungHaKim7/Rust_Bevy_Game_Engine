@@ -13,6 +13,8 @@
 
 - [(통합본)rust_game_dev--globalyoung정리중-모아보기](#rust_game_dev--globalyoung정리중-모아보기)
 
+- 용어 정리
+  - [ECS(Entity Component System) 용어 이해]( 
 
 <hr />
 
@@ -342,41 +344,47 @@ https://youtu.be/zvLWibkWcVg?si=ibJVzarMVenqYEWP
 
 https://youtu.be/GwlZ5EPu8l0?si=cPHJUupEsMuYDDfU
 
-# Bevy Plugin Showcases | Logic Projects[[🔝]](#link)
+# Bevy Plugin Showcases | Logic Projects[|🔝|](#link)
 
 - https://youtube.com/playlist?list=PLT_D88-MTFOP4QE1D0eUKlPpUi35uVvuy&si=AfjBDeqcKtvHiTR0
 
 <hr>
 
-# Doom 만들면서 게임엔진 이해하기(Rust Code)[[🔝]](#link)
+# Doom 만들면서 게임엔진 이해하기(Rust Code)[|🔝|](#link)
 - https://gitlab.com/flukejones/room4doom
   - https://ljones.dev/blog/room4doom-20220529/
  
 
-# Qt Tutorials(C++)[[🔝]](#link)
+# Qt Tutorials(C++)[|🔝|](#link)
 - https://github.com/kelvins/qt-examples-and-tutorials
 - qt공식 사이트
   - C++ 예재
     - https://doc.qt.io/qt-6/qt3d-simple-cpp-example.html
 
-# gnutplot(linuxOS 설치)
+# gnutplot(linuxOS 설치)[|🔝|](#link)
 ```
 sudo apt install -y gnuplot
 ```
 
-<hr>
+
+<hr />
+
+# ECS(Entity Component System) 용어 이해[|🔝|](#link)
+- https://youtube.com/shorts/RnuvHcmDnyA?si=t0UK8LN0CmWzm5QH
 
 <hr>
 
-# 러스트해서 살아남은 case 👍
+<hr>
 
-# 러스트 게임 개발자(240717기준) 최근까지 살아남은 몇 안되는 Rust Dev.존경스럽다.[[🔝]](#link)
+# 러스트해서 살아남은 case 👍[|🔝|](#link)
+
+# 러스트 게임 개발자(240717기준) 최근까지 살아남은 몇 안되는 Rust Dev.존경스럽다.[|🔝|](#link)
 - Game dev in Rust - some notes on the mess
   - https://users.rust-lang.org/t/game-dev-in-rust-some-notes-on-the-mess/104939
 
 ## 러스트하다가 포기한 case 👎
 
-# 러스트 동시실행에서 무너진 개발자(거의 다 왔는데 바보...)(240426기준글)[[🔝]](#link)
+# 러스트 동시실행에서 무너진 개발자(거의 다 왔는데 바보...)(240426기준글)[|🔝|](#link)
 - **[GN⁺: Rust로 게임 개발을 한 3년 후에 떠나며](<https://news.hada.io/topic?id=14521&utm_source=discord&utm_medium=bot&utm_campaign=1480>)**
 - Rust에 익숙해지면 모든 문제가 사라질 것이라는 주장에 대해  
   - Rust에 익숙해져도 근본적인 문제는 사라지지 않음  
